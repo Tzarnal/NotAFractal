@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using NotAFractal.Models.ViewModels;
 using System.Web.Mvc;
 
 namespace NotAFractal.Controllers
@@ -13,7 +10,11 @@ namespace NotAFractal.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            var tnode = new NodeViewModel {Id = 1,
+                Title = "Not A Fractal", 
+                Name = "A Limited Subset of Everything"};
+            
+            return View(tnode);
         }
 
     }
