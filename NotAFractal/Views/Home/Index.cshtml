@@ -1,9 +1,13 @@
 ﻿@model NotAFractal.Models.ViewModels.NodeViewModel
 
 <div class="node" id="@Model.Id">
-    <a>@Model.Title</a>
+    <a class="toggleLink">@Model.Title</a>
     
     <div class="nodeContainer" id ="@(Model.Id)Container">
-        <h5>@Model.Name</h5>
+        <h5 class="">@Model.Name</h5>
+        @foreach (var node in @Model.ChildNodes)
+        {
+            @Html.Partial("_NodeStub", node);
+        }
     </div>
 </div>

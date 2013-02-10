@@ -8,7 +8,8 @@ namespace NotAFractal
         {
             bundles.Add(new ScriptBundle("~/bundles/scripts")
                             .Include("~/Scripts/jquery-{version}.js")
-                            .Include("~/Scripts/bootstrap.js"));
+                            .Include("~/Scripts/bootstrap.js")
+                            .Include("~/Scripts/NotAFractal.js"));
 
             bundles.Add(new StyleBundle("~/bundles/css")
                             .Include("~/Content/css/bootstrap.css")
