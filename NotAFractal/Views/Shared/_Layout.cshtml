@@ -3,12 +3,27 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>A Broken Universe</title>
+        <title>Not A Fractal</title>
         @Styles.Render("~/bundles/css")        
     </head>
-    <body>
-        @RenderBody()
-        
+    <body>               
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span10 mainContent">
+                    @RenderBody()              
+                </div>
+                <div class="span2 mainSidebar">
+                    @RenderSection("sidebar",false)     
+                </div>
+            </div>
+        </div>
+                
+        <hr/>
+        <footer>
+            <p>Not A Fractal - A Limited Subset of Everything</p>
+            <p>&copy; Stefan van Oudenaarden</p>
+        </footer>
+
         @Scripts.Render("~/bundles/scripts")
     </body>
 </html>

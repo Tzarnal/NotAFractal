@@ -12,7 +12,8 @@ namespace NotAFractal
 
             bundles.Add(new StyleBundle("~/bundles/css")
                             .Include("~/Content/css/bootstrap.css")
-                            .Include("~/Content/css/bootstrap-responsive.css"));
+                            .Include("~/Content/css/bootstrap-responsive.css")
+                            .Include("~/Content/css/site.css"));
         }
     }
 }
