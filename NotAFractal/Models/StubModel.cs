@@ -37,7 +37,7 @@ namespace NotAFractal.Models
             return node;
         }
 
-        public static object getNodeInformation(int seed, string type)
+        public static object GetNodeInformation(int seed, string type)
         {
             if(type == "Root")
             {

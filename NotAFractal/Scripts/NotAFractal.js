@@ -5,7 +5,7 @@
 
 //Generates the content of a node
 generate = function(nodeType, nodeSeed, element) {
-    $.get('Node/GetNode/' + nodeType + '?Seed=' + nodeSeed, function(data) {
+    $.get('Node/GetNode/' + nodeType + '/' + nodeSeed, function(data) {
         //Add new nodes to page then mark this node as having generated its children
         $(element).append(data);
         $(element).data('generated', true);
@@ -20,7 +20,6 @@ generate = function(nodeType, nodeSeed, element) {
         $(element).children(".toggleLink").children(".treeViewToggleIndicator").text("-");
     });
 };
-
 
 toggle = function() {
     {
@@ -56,7 +55,7 @@ typeInfo = function() {
 };
 
 getInfo = function(nodeType, nodeSeed) {
-    $.get('Node/GetNodeInformation/' + nodeType + '?Seed=' + nodeSeed, function (data) {        
+    $.get('Node/GetNodeInformation/' + nodeType + '/' + nodeSeed, function (data) {        
         $('.mainSidebar').html(data);
     });
 };

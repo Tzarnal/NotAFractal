@@ -13,6 +13,6 @@ namespace NotAFractal.Controllers
         {
             return View(StubModel.GetRootNode(1));
         }
-
+        
     }
 }
