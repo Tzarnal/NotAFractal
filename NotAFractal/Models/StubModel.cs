@@ -11,6 +11,7 @@ namespace NotAFractal.Models
             node.Title = "Not A Fractal";
             node.Name = "A limited subset of everything";
             node.Type = "Root";
+            node.Seed = 1;
 
             return node;
         }
@@ -28,12 +29,34 @@ namespace NotAFractal.Models
                                 {
                                     Title = i.ToString(),
                                     Seed = random.Next(1,int.MaxValue),
-                                    Type = type,
+                                    Type = "Node",
                                 };
                 node.ChildNodes.Add(tnode);
             }
 
             return node;
+        }
+
+        public static object getNodeInformation(int seed, string type)
+        {
+            if(type == "Root")
+            {
+                return new NodeInformationViewModel
+                {
+                    Title = "Not A Fractal",
+                    Text = "Not a Fractal is named this way because a 2012 study found that the universe is probably not a fractal. And thats a marginally more clever name then Universe.",
+                    Link = "http://github.com/Xesyto/NotAFractal"
+                };    
+            }
+
+            return new NodeInformationViewModel
+            {
+                Title = "A Node",
+                Text = "This node has a type of: " + type + " and was generated with a seed of: " + seed,
+                Link = "http://en.wikipedia.org/wiki/Node_%28computer_science%29"
+            };    
+
+                   
         }
     }
 }

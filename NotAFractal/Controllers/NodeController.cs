@@ -11,10 +11,14 @@ namespace NotAFractal.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        public ActionResult GetNode(string type, int seed)
+        public ActionResult GetNode(string id, int seed)
         {
-            return View(StubModel.GetNode(seed,type));
+            return View(StubModel.GetNode(seed,id));
         }
 
+        public ActionResult GetNodeInformation(string id, int seed)
+        {
+            return View(StubModel.getNodeInformation(seed, id));
+        }
     }
 }

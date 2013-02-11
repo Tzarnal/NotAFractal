@@ -1,5 +1,6 @@
 ﻿$(document).ready(function() {
     $(".toggleLink").click(toggle);
+    $(".infoLink").click(typeInfo);
 });
 
 //Generates the content of a node
@@ -9,8 +10,9 @@ generate = function(nodeType, nodeSeed, element) {
         $(element).append(data);
         $(element).data('generated', true);
 
-        //Associate click events to new nodes, so they in turn can be expanded
+        //Associate click events to new nodes, so they in turn can be expanded or have their information displayed
         $(element).children(".nodeContainer").find('.toggleLink').click(toggle);
+        $(element).children(".nodeContainer").find('.infoLink').click(typeInfo);
 
         //Finally open up the node for view
         $(element).data('open', true);        
@@ -45,4 +47,16 @@ toggle = function() {
         }
     }
     ;
+};
+
+typeInfo = function() {
+    var node = $(this).parent();
+
+    getInfo(node.data('type'), node.data('seed'));
+};
+
+getInfo = function(nodeType, nodeSeed) {
+    $.get('Node/GetNodeInformation/' + nodeType + '?Seed=' + nodeSeed, function (data) {        
+        $('.mainSidebar').html(data);
+    });
 };
