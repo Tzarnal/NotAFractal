@@ -26,9 +26,9 @@
 }
 
 .toggleLink {
-    
+    cursor: default;
 }
 
 .infoLink {
-    
+    cursor: pointer;
 }
