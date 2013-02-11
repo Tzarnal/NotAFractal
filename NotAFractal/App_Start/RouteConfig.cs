@@ -15,8 +15,7 @@ namespace NotAFractal
 
             routes.MapRoute(
                 name: "Node",
-                url: "{controller}/{action}/{type}/{seed}",
-                defaults: new { controller = "Home", action = "Index" }
+                url: "{controller}/{action}/{type}/{seed}"                
             );
 
             routes.MapRoute(

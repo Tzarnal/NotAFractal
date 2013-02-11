@@ -5,7 +5,7 @@
 
 //Generates the content of a node
 generate = function(nodeType, nodeSeed, element) {
-    $.get('Node/GetNode/' + nodeType + '/' + nodeSeed, function(data) {
+    $.get('/Node/GetNode/' + nodeType + '/' + nodeSeed, function(data) {
         //Add new nodes to page then mark this node as having generated its children
         $(element).append(data);
         $(element).data('generated', true);
@@ -55,7 +55,7 @@ typeInfo = function() {
 };
 
 getInfo = function(nodeType, nodeSeed) {
-    $.get('Node/GetNodeInformation/' + nodeType + '/' + nodeSeed, function (data) {        
+    $.get('/Node/GetNodeInformation/'+nodeType+'/'+nodeSeed, function (data) {
         $('.mainSidebar').html(data);
     });
 };
