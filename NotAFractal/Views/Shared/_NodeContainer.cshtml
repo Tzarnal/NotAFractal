@@ -1,0 +1,18 @@
+﻿@model NotAFractal.Models.ViewModels.NodeViewModel
+
+<div class="nodeContainer">
+    @if(!Model.Name.IsEmpty())
+    {
+    <h6>@Model.Name</h6>        
+    }
+    @if(!Model.Text.IsEmpty())
+    {
+    <p>@Model.Text</p> 
+    }
+
+    @foreach (var node in @Model.ChildNodes)
+    {
+        @Html.Partial("_NodeStub", node)
+    }
+</div>
+

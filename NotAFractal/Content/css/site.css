@@ -6,16 +6,25 @@
 }
 
 .mainSidebar {
-    border-left-width: thin !important;
-    border-left-style: solid;
-    border-left-color: slategray;
+
 }
 
 .node {
-    
+
 }
 
 .nodeContainer {
     margin-left: 10px;
     display: none;
+}
+
+.treeViewToggleIndicator {
+    color:#fff;
+	background-color:#000;
+	padding-left:3px;
+	padding-right:3px;
+}
+
+.toggleLink {
+    
 }

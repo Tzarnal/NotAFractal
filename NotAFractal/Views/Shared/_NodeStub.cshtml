@@ -1,5 +1,8 @@
 ﻿@model NotAFractal.Models.ViewModels.NodeViewModel
 
-<div class="node" id="@Model.Id">
-    <a>@Model.Title</a>    
+<div class="node" data-open="false" data-generated="false" data-seed="@Model.Seed" data-Type="@Model.Type">
+    <span class="toggleLink">
+        <span class="treeViewToggleIndicator">+</span> 
+        @Model.Title
+    </span>  - <a href="#">Info</a>     
 </div>
