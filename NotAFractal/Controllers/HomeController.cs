@@ -14,7 +14,7 @@ namespace NotAFractal.Controllers
         
         public ActionResult Root(string type, int seed)
         {
-            return View("Index", StubModel.GetRootNode(seed, type));
+            return View("Index", _nodes.BuildNodeViewModel(seed,type));
         }
     }
 }

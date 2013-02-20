@@ -33,7 +33,8 @@ namespace NotAFractal.Models
                                Title = fractalNode.Title,
                                Name = fractalNode.Name,                               
                                Text = fractalNode.Text,
-                               Seed = 1,
+                               
+                               Seed = seed,
                                Type = type,
                            };
 
@@ -42,7 +43,23 @@ namespace NotAFractal.Models
 
         public NodeInformationViewModel BuildNodeInformationViewModel(int seed, string type)
         {
-            return new NodeInformationViewModel();
+            if (!_nodeList.ContainsKey(type))
+            {
+                throw new KeyNotFoundException("Could not find the specified Node Type.");
+            }
+
+            var fractalNode = _nodeList[type];
+            var nodeInformationViewModel = new NodeInformationViewModel
+            {
+                Title = fractalNode.SidebarTitle,                
+                Text = fractalNode.SidebarText,
+                Link = fractalNode.SidebarUrl,                
+                
+                Seed = seed,
+                Type = type,
+            };
+
+            return nodeInformationViewModel;
         }
 
     }

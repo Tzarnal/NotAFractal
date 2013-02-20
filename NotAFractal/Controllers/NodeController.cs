@@ -5,7 +5,8 @@ namespace NotAFractal.Controllers
 {
     public class NodeController : Controller
     {
-    
+        private FractalNodeManager _nodes = FractalNodeManager.Instance;
+
         public ActionResult Index()
         {
             return RedirectToAction("Index", "Home");
@@ -13,12 +14,12 @@ namespace NotAFractal.Controllers
 
         public ActionResult GetNode(string type, int seed)
         {
-            return View(StubModel.GetNode(seed, type));
+            return View(_nodes.BuildNodeViewModel(seed,type));
         }
 
         public ActionResult GetNodeInformation(string type, int seed)
         {
-            return View(StubModel.GetNodeInformation(seed, type));
+            return View(_nodes.BuildNodeInformationViewModel(seed,type));
         }
     }
 }
