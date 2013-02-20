@@ -131,8 +131,8 @@
     <Compile Include="Models\StubModel.cs" />
     <Compile Include="Models\ViewModels\NodeInformationViewModel.cs" />
     <Compile Include="Models\ViewModels\NodeViewModel.cs" />
-    <Compile Include="Models\YamlNode.cs" />
-    <Compile Include="Models\YamlNodeManager.cs" />
+    <Compile Include="Models\FractalNode.cs" />
+    <Compile Include="Models\FractalNodeManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +145,7 @@
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\site.css" />
     <Content Include="Global.asax" />
+    <Content Include="Data\Template.yaml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

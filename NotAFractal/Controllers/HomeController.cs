@@ -5,12 +5,13 @@ namespace NotAFractal.Controllers
 {
     public class HomeController : Controller
     {
+        private FractalNodeManager _nodes = FractalNodeManager.Instance;
+        
         public ActionResult Index()
-        {
-            return View(StubModel.GetRootNode(1));
+        {            
+            return View(_nodes.BuildNodeViewModel(1,"Root"));            
         }
         
-
         public ActionResult Root(string type, int seed)
         {
             return View("Index", StubModel.GetRootNode(seed, type));

@@ -1,0 +1,14 @@
+---
+#Comment Lines
+Title:          A Template Title
+Name:           Name for this Template
+Text:           
+    Text to display in this node, 
+    probably a short discription of what this Node does
+
+SidebarText:    
+    Text to display in a sidebar.
+    Probably also going to span multiple lines
+SidebarURL:     Url link for "Would you like to know more"
+SidebarTitle:   Title For the Sidebar
+...
