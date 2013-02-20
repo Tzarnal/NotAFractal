@@ -7,6 +7,6 @@
         public string Link { get; set; }
 
         public string Type { get; set; }
-        public string Seed { get; set; }
+        public int Seed { get; set; }
     }
 }
