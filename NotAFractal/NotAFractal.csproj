@@ -124,12 +124,15 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NodeController.cs" />
+    <Compile Include="Data\YamlToNodeParser.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\StubModel.cs" />
     <Compile Include="Models\ViewModels\NodeInformationViewModel.cs" />
     <Compile Include="Models\ViewModels\NodeViewModel.cs" />
+    <Compile Include="Models\YamlNode.cs" />
+    <Compile Include="Models\YamlNodeManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -164,7 +167,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
