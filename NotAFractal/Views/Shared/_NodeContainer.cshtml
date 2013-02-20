@@ -14,5 +14,10 @@
     {
         @Html.Partial("_NodeStub", node)
     }
+    
+    @if(!Model.ChildNodes.Any())
+    {
+        <p>Empty Node</p>
+    }
 </div>
 
