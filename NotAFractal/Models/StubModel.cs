@@ -33,7 +33,7 @@ namespace NotAFractal.Models
             var random = new Random(seed);
             var node = new NodeViewModel();
             
-            var childCount = random.Next(1, 10);
+            var childCount = random.Next(0, 10);
 
             for (int i = 0; i < childCount; i++)
             {
