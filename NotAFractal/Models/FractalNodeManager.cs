@@ -11,6 +11,7 @@ namespace NotAFractal.Models
         private static FractalNodeManager _instance;
         private Dictionary<string,FractalNode> _nodeList;
         private NodeViewModelBuilder _nodeViewModelBuilder;
+        private NodeInformationViewModelBuilder _nodeInformationViewModelBuilder;
 
 
         public static FractalNodeManager Instance
@@ -22,6 +23,7 @@ namespace NotAFractal.Models
         {
             _nodeList = YamlToNodeParser.ParseNodes();
             _nodeViewModelBuilder  = new NodeViewModelBuilder();
+            _nodeInformationViewModelBuilder = new NodeInformationViewModelBuilder();
         }
 
         public NodeViewModel BuildNodeViewModel(int seed, string type)
@@ -52,17 +54,8 @@ namespace NotAFractal.Models
             }
 
             var fractalNode = _nodeList[type];
-            var nodeInformationViewModel = new NodeInformationViewModel
-            {
-                Title = fractalNode.SidebarTitle,                
-                Text = fractalNode.SidebarText,
-                Link = fractalNode.SidebarUrl,                
-                
-                Seed = seed,
-                Type = type,
-            };
 
-            return nodeInformationViewModel;
+            return _nodeInformationViewModelBuilder.Build(seed, _nodeList[type]);
         }
     }
 }
