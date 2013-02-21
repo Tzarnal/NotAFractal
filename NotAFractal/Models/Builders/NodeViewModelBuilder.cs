@@ -11,7 +11,7 @@ namespace NotAFractal.Models.Builders
         public NodeViewModel Build(int seed, FractalNode type)
         {
             var random = new Random(seed);
-            var _nodes = FractalNodeManager.Instance;
+            var nodes = FractalNodeManager.Instance;
 
             var nodeViewModel = new NodeViewModel
             {
@@ -22,7 +22,10 @@ namespace NotAFractal.Models.Builders
                 Seed = seed,
                 Type = type.Type,
             };
-           
+
+            if (type.Nodes == null)
+                return nodeViewModel;
+
             foreach (var weightedNode in type.Nodes)
             {
                 if(random.Next(0,100) <=  weightedNode.PercentageChance)
@@ -34,7 +37,7 @@ namespace NotAFractal.Models.Builders
                         if( nodeViewModel.ChildNodes == null)
                             nodeViewModel.ChildNodes = new List<NodeViewModel>();
                         
-                        nodeViewModel.ChildNodes.Add(_nodes.BuildNodeViewModelStub(random.Next(1,int.MaxValue),weightedNode.Type));
+                        nodeViewModel.ChildNodes.Add(nodes.BuildNodeViewModelStub(random.Next(1,int.MaxValue),weightedNode.Type));
                         count--;
                     }
                 }
@@ -53,6 +56,18 @@ namespace NotAFractal.Models.Builders
 
                 Seed = seed,
                 Type = type.Type,
+            };
+
+            return nodeViewModel;
+        }
+
+        public NodeViewModel ExceptionNode(string message)
+        {            
+            var nodeViewModel = new NodeViewModel
+            {
+                Title = message,
+                Seed = 1,
+                Type = "ExceptionNode",
             };
 
             return nodeViewModel;

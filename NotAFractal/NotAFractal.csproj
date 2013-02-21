@@ -148,7 +148,8 @@
     <Content Include="Content\css\site.css" />
     <Content Include="Global.asax" />
     <Content Include="Data\FractalNodes\Template.yaml" />
-    <Content Include="Data\FractalNodes\Root.yaml" />
+    <Content Include="Data\FractalNodes\RootNode.yaml" />
+    <Content Include="Data\FractalNodes\ExceptionNode.yaml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

@@ -88,7 +88,9 @@ namespace NotAFractal.Data
                 var nodesScalar = new YamlScalarNode("Nodes");
                 if (mapping.Children.Keys.Contains(nodesScalar))
                 {
-                    foreach (YamlMappingNode subnode in (YamlSequenceNode)mapping.Children[nodesScalar])
+                    var subnodes = (YamlSequenceNode) mapping.Children[nodesScalar];
+                    
+                    foreach (YamlMappingNode subnode in subnodes)
                     {
                         var nodeWeighted = new FractalNodeWeighted();
 

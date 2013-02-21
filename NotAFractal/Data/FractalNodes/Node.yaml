@@ -8,8 +8,8 @@ SidebarURL:     http://en.wikipedia.org/wiki/Node_%28computer_science%29
 SidebarTitle:   Node
 
 Nodes:
-    - Type:             Node 
-      PercentageChance: 100 
-      MinAmount:        0 
-      MaxAmount:        10 
+    - Type:             Node #Testcomment
+      PercentageChance: 100 #Testcomment
+      MinAmount:        0 #Testcomment
+      MaxAmount:        10 #Testcomment
 ...

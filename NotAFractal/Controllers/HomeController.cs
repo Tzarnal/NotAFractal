@@ -9,7 +9,7 @@ namespace NotAFractal.Controllers
         
         public ActionResult Index()
         {            
-            return View(_nodes.BuildNodeViewModel(1,"Root"));            
+            return View(_nodes.BuildNodeViewModel(1,"RootNode"));            
         }
         
         public ActionResult Root(string type, int seed)

@@ -28,7 +28,7 @@ namespace NotAFractal.Models
         {
             if (!_nodeList.ContainsKey(type))
             {
-                throw new KeyNotFoundException("Could not find the specified Node Type.");
+                return _nodeViewModelBuilder.ExceptionNode("Could not find this Node Type:" + type);
             }
 
             return _nodeViewModelBuilder.Build(seed, _nodeList[type]);
@@ -38,7 +38,7 @@ namespace NotAFractal.Models
         {
             if (!_nodeList.ContainsKey(type))
             {
-                throw new KeyNotFoundException("Could not find the specified Node Type.");
+                return _nodeViewModelBuilder.ExceptionNode("Could not find this Node Type: " + type);
             }
 
             return _nodeViewModelBuilder.BuildStub(seed, _nodeList[type]);
@@ -48,7 +48,7 @@ namespace NotAFractal.Models
         {
             if (!_nodeList.ContainsKey(type))
             {
-                throw new KeyNotFoundException("Could not find the specified Node Type.");
+                throw new KeyNotFoundException("Could not find this Node Type");
             }
 
             var fractalNode = _nodeList[type];
