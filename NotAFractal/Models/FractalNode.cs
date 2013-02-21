@@ -15,5 +15,6 @@ namespace NotAFractal.Models
         public string SidebarUrl { get; set; }
         public string SidebarTitle { get; set; }
 
+        public List<FractalNodeWeighted> Nodes { get; set; }
     }
 }

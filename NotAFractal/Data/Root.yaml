@@ -6,4 +6,10 @@ SidebarText:
     Not a Fractal is named this way because a 2012 study found that the universe is probably not a fractal. And thats a marginally more clever name then Universe. 
 SidebarURL:     http://github.com/Xesyto/NotAFractal
 SidebarTitle:   Not A Fractal
+
+Nodes:
+    - Type:             Node 
+      PercentageChance: 100 
+      MinAmount:        0 
+      MaxAmount:        10 
 ...
