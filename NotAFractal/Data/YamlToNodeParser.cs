@@ -12,7 +12,7 @@ namespace NotAFractal.Data
     {
         public static Dictionary<string, FractalNode> ParseNodes()
         {
-            var path = HostingEnvironment.MapPath(@"~/Data");
+            var path = HostingEnvironment.MapPath(@"~/Data/FractalNodes");
 
             if(path == null)
                 throw new FileNotFoundException();

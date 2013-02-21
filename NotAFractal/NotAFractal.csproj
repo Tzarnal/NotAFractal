@@ -146,7 +146,8 @@
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\site.css" />
     <Content Include="Global.asax" />
-    <Content Include="Data\Template.yaml" />
+    <Content Include="Data\FractalNodes\Template.yaml" />
+    <Content Include="Data\FractalNodes\Root.yaml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
