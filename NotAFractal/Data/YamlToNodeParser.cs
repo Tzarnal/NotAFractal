@@ -22,13 +22,14 @@ namespace NotAFractal.Data
 
             foreach (var nodeFile in nodeFiles)
             {                                
-                var node = ReadFile(nodeFile);
-                // ReSharper disable AssignNullToNotNullAttribute
+                var node = ReadFile(nodeFile);                
                 var nodeType = Path.GetFileNameWithoutExtension(nodeFile);
-                // ReSharper restore AssignNullToNotNullAttribute
+
 
                 node.Type = nodeType;
-                nodes.Add(nodeType, node);                                
+                // ReSharper disable AssignNullToNotNullAttribute
+                nodes.Add(nodeType, node);
+                // ReSharper restore AssignNullToNotNullAttribute                
             }
 
             return nodes;
