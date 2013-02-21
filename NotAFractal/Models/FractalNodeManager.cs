@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using NotAFractal.Data;
+using NotAFractal.Models.Builders;
 using NotAFractal.Models.ViewModels;
 
 namespace NotAFractal.Models
@@ -9,6 +10,8 @@ namespace NotAFractal.Models
         //YamlNodeManager is a singleton, to ensure the potentially large set of nodes only exists once.
         private static FractalNodeManager _instance;
         private Dictionary<string,FractalNode> _nodeList;
+        private NodeViewModelBuilder _nodeViewModelBuilder;
+
 
         public static FractalNodeManager Instance
         {
@@ -18,6 +21,7 @@ namespace NotAFractal.Models
         private FractalNodeManager()
         {
             _nodeList = YamlToNodeParser.ParseNodes();
+            _nodeViewModelBuilder  = new NodeViewModelBuilder();
         }
 
         public NodeViewModel BuildNodeViewModel(int seed, string type)
@@ -27,20 +31,19 @@ namespace NotAFractal.Models
                 throw new KeyNotFoundException("Could not find the specified Node Type.");
             }
 
-            var fractalNode = _nodeList[type];
-            var nodeViewModel = new NodeViewModel
-                           {
-                               Title = fractalNode.Title,
-                               Name = fractalNode.Name,                               
-                               Text = fractalNode.Text,
-                               
-                               Seed = seed,
-                               Type = type,
-                           };
-
-            return nodeViewModel;
+            return _nodeViewModelBuilder.Build(seed, _nodeList[type]);
         }
 
+        public NodeViewModel BuildNodeViewModelStub(int seed, string type)
+        {
+            if (!_nodeList.ContainsKey(type))
+            {
+                throw new KeyNotFoundException("Could not find the specified Node Type.");
+            }
+
+            return _nodeViewModelBuilder.BuildStub(seed, _nodeList[type]);
+        }
+        
         public NodeInformationViewModel BuildNodeInformationViewModel(int seed, string type)
         {
             if (!_nodeList.ContainsKey(type))
