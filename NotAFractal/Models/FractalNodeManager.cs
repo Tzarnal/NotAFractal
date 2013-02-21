@@ -61,6 +61,5 @@ namespace NotAFractal.Models
 
             return nodeInformationViewModel;
         }
-
     }
 }
