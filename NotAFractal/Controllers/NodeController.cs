@@ -5,7 +5,7 @@ namespace NotAFractal.Controllers
 {
     public class NodeController : Controller
     {
-        private FractalNodeManager _nodes = FractalNodeManager.Instance;
+        private ModelManager _nodes = ModelManager.Instance;
 
         public ActionResult Index()
         {

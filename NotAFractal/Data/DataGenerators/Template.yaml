@@ -1,0 +1,33 @@
+---
+#Data Generator files use a somewhat complex notaion to make generate text
+#You can use Generator Files in Fractal Node files to include stuff like unique names
+#If write $GeneratorName$ the file name without the .yaml that will be replaced with DataGenerator created text
+
+#You can use any number of the below blocks, which will strung together in sequence
+#These blocks will pick 1 of the entries in such a block, the choise is weighted by the number provided
+
+#IF you want to make a node option including an empty string with a heavy weight will acomplish this
+
+# - [String , weight]
+#Example
+- 
+    - [Stefan, 1]
+    - [Mark, 1]
+    - [Steve, 1]
+    - [Londo, 1]
+
+-
+    - [" ", 1]
+
+- 
+    - [Van, 1]
+    - ["", 3]
+
+-
+    - [" ", 1]
+
+- 
+    - [Oudenaarden, 1]
+    - [De Vaart, 1]
+    - [Vliet, 2]
+...

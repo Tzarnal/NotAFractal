@@ -1,29 +1,33 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using NotAFractal.Data;
 using NotAFractal.Models.Builders;
 using NotAFractal.Models.ViewModels;
 
 namespace NotAFractal.Models
 {
-    public class FractalNodeManager
+    public class ModelManager
     {
         //YamlNodeManager is a singleton, to ensure the potentially large set of nodes only exists once.
-        private static FractalNodeManager _instance;
-        private Dictionary<string,FractalNode> _nodeList;
-        private NodeViewModelBuilder _nodeViewModelBuilder;
-        private NodeInformationViewModelBuilder _nodeInformationViewModelBuilder;
+        private static ModelManager _instance;
+        
+        private readonly Dictionary<string,FractalNode> _nodeList;
+        private readonly NodeViewModelBuilder _nodeViewModelBuilder;
+        private readonly NodeInformationViewModelBuilder _nodeInformationViewModelBuilder;
+        private readonly Dictionary<string, DataGenerator> _dataGenerators;
 
-
-        public static FractalNodeManager Instance
+        public static ModelManager Instance
         {
-            get { return _instance ?? (_instance = new FractalNodeManager()); }
+            get { return _instance ?? (_instance = new ModelManager()); }
         }
             
-        private FractalNodeManager()
+        private ModelManager()
         {
             _nodeList = YamlToNodeParser.ParseNodes();
             _nodeViewModelBuilder  = new NodeViewModelBuilder();
             _nodeInformationViewModelBuilder = new NodeInformationViewModelBuilder();
+            _dataGenerators = YamlToDataGeneratorParser.ParseGenerators();
         }
 
         public NodeViewModel BuildNodeViewModel(int seed, string type)
@@ -53,9 +57,32 @@ namespace NotAFractal.Models
                 throw new KeyNotFoundException("Could not find this Node Type");
             }
 
-            var fractalNode = _nodeList[type];
-
             return _nodeInformationViewModelBuilder.Build(seed, _nodeList[type]);
+        }
+
+        public string ProcessDataGeneratorSymbols(int seed, string text)
+        {
+            var symbols = Regex.Match(text, @"\$\w+\$").Groups;
+            var random = new Random(seed);
+
+            if(symbols.Count > 0)
+            {                
+                foreach (var symbol in symbols)
+                {
+                    var symbolString = symbol.ToString();
+                    var strippedSymbol = symbolString.Replace("$",string.Empty);
+                    
+
+
+                    if(_dataGenerators.ContainsKey(strippedSymbol))
+                    {
+                        var generator = _dataGenerators[strippedSymbol];
+                        text = text.Replace(symbolString, generator.Generate(random.Next(1, int.MaxValue)));
+                    }
+                }
+            }
+
+            return text;
         }
     }
 }

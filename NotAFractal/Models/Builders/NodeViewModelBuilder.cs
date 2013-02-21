@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using NotAFractal.Models.ViewModels;
 
 namespace NotAFractal.Models.Builders
@@ -11,7 +9,7 @@ namespace NotAFractal.Models.Builders
         public NodeViewModel Build(int seed, FractalNode type)
         {
             var random = new Random(seed);
-            var nodes = FractalNodeManager.Instance;
+            var modelManager = ModelManager.Instance;
 
             var nodeViewModel = new NodeViewModel
             {
@@ -37,7 +35,7 @@ namespace NotAFractal.Models.Builders
                         if( nodeViewModel.ChildNodes == null)
                             nodeViewModel.ChildNodes = new List<NodeViewModel>();
                         
-                        nodeViewModel.ChildNodes.Add(nodes.BuildNodeViewModelStub(random.Next(1,int.MaxValue),weightedNode.Type));
+                        nodeViewModel.ChildNodes.Add(modelManager.BuildNodeViewModelStub(random.Next(1,int.MaxValue),weightedNode.Type));
                         count--;
                     }
                 }
@@ -49,10 +47,11 @@ namespace NotAFractal.Models.Builders
         public NodeViewModel BuildStub(int seed, FractalNode type)
         {
             var random = new Random(seed);
+            var modelManager = ModelManager.Instance;
 
             var nodeViewModel = new NodeViewModel
             {
-                Title = type.Title,
+                Title = modelManager.ProcessDataGeneratorSymbols(random.Next(0,int.MaxValue), type.Title),
 
                 Seed = seed,
                 Type = type.Type,

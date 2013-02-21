@@ -25,7 +25,6 @@ namespace NotAFractal.Data
                 var node = ReadFile(nodeFile);                
                 var nodeType = Path.GetFileNameWithoutExtension(nodeFile);
 
-
                 node.Type = nodeType;
                 // ReSharper disable AssignNullToNotNullAttribute
                 nodes.Add(nodeType, node);

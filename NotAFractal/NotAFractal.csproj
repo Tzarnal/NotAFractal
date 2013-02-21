@@ -124,17 +124,21 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NodeController.cs" />
+    <Compile Include="Data\YamlToDataGeneratorParser.cs" />
     <Compile Include="Data\YamlToNodeParser.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Builders\NodeInformationViewModelBuilder.cs" />
     <Compile Include="Models\Builders\NodeViewModelBuilder.cs" />
+    <Compile Include="Models\DataGenerator.cs" />
+    <Compile Include="Models\DataGeneratorEntry.cs" />
     <Compile Include="Models\FractalNodeWeighted.cs" />
     <Compile Include="Models\StubModel.cs" />
     <Compile Include="Models\ViewModels\NodeInformationViewModel.cs" />
     <Compile Include="Models\ViewModels\NodeViewModel.cs" />
     <Compile Include="Models\FractalNode.cs" />
-    <Compile Include="Models\FractalNodeManager.cs" />
+    <Compile Include="Models\ModelManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -150,6 +154,7 @@
     <Content Include="Data\FractalNodes\Template.yaml" />
     <Content Include="Data\FractalNodes\RootNode.yaml" />
     <Content Include="Data\FractalNodes\ExceptionNode.yaml" />
+    <Content Include="Data\DataGenerators\Template.yaml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
