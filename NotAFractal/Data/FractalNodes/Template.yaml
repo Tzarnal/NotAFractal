@@ -9,7 +9,7 @@ Text:
 SidebarText:    
     Text to display in a sidebar.
     Probably also going to span multiple lines
-SidebarURL:     Url link for "Would you like to know more"
+SidebarURL:     Http://Google.com/ #Url link for "Would you like to know more" ( http:// should be included )
 SidebarTitle:   Title For the Sidebar
 
 Nodes:

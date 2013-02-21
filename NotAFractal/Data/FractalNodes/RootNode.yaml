@@ -1,5 +1,5 @@
 ---
-#Comment Lines
+#By design not all nodes are included in the project, don't worry, as long as your node is a .yaml file in the FractalNodes directory it will be used.
 Title:          Not A Fractal
 Name:           A limited subset of everything   
 SidebarText:    
