@@ -1,5 +1,9 @@
 ---
-#Comment Lines
+#Fractal Nodes are the thing that Not A Fractal trees are built out of
+#Template.yaml is a self documenting example of how these files are made
+#Normally RootNode.yaml is the node used when you open the homepage
+#Everything Branches from RootNode.yaml
+
 Title:          A Template Title
 Name:           Name for this Template
 Text:           
@@ -22,4 +26,6 @@ Nodes:
       PercentageChance: 100
       MinAmount:        1
       MaxAmount:        1
+
+      #You can have as many additional node entries as you want.
 ...
