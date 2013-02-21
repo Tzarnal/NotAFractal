@@ -21,10 +21,14 @@ namespace NotAFractal.Data
             var nodeFiles = Directory.GetFiles(path, "*.yaml");
 
             foreach (var nodeFile in nodeFiles)
-            {                
+            {                                
+                var node = ReadFile(nodeFile);
                 // ReSharper disable AssignNullToNotNullAttribute
-                nodes.Add(Path.GetFileNameWithoutExtension(nodeFile),ReadFile(nodeFile));                
+                var nodeType = Path.GetFileNameWithoutExtension(nodeFile);
                 // ReSharper restore AssignNullToNotNullAttribute
+
+                node.Type = nodeType;
+                nodes.Add(nodeType, node);                                
             }
 
             return nodes;
