@@ -24,9 +24,12 @@ namespace NotAFractal.Data
             {
                 var generator = ReadFile(generatorFile);
 
-                // ReSharper disable AssignNullToNotNullAttribute
-                generators.Add(Path.GetFileNameWithoutExtension(generatorFile),generator);
-                // ReSharper restore AssignNullToNotNullAttribute
+                if( generator != null)
+                {
+                    // ReSharper disable AssignNullToNotNullAttribute
+                    generators.Add(Path.GetFileNameWithoutExtension(generatorFile), generator);
+                    // ReSharper restore AssignNullToNotNullAttribute
+                }
             }
 
             return generators;
@@ -46,21 +49,19 @@ namespace NotAFractal.Data
                 Debug.WriteLine("Error Opening: " + fileName);
 
                 throw;
-            }
-            
+            }            
         }
 
         private static DataGenerator ParseYamlFile(StreamReader input)
         {
             var generator = new DataGenerator {DataGeneratorEntries = new List<DataGeneratorEntry>()};
-
             var yaml = new YamlStream();
-            yaml.Load(input);
-
-            var mapping = (YamlSequenceNode)yaml.Documents[0].RootNode;
 
             try
             {
+                yaml.Load(input);
+                var mapping = (YamlSequenceNode)yaml.Documents[0].RootNode;
+                
                 foreach (YamlSequenceNode node in mapping)
                 {
                     var generatorEntry = new DataGeneratorEntry {WeightedStrings = new Dictionary<string, int>()};
@@ -78,10 +79,11 @@ namespace NotAFractal.Data
 
                     generator.DataGeneratorEntries.Add(generatorEntry);
                 }
-            }
+            }            
             catch (Exception e)
             {
                 Debug.WriteLine(e);
+                return null;
             }
 
             return generator;

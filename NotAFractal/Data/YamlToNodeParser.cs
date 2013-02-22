@@ -25,10 +25,14 @@ namespace NotAFractal.Data
                 var node = ReadFile(nodeFile);                
                 var nodeType = Path.GetFileNameWithoutExtension(nodeFile);
 
-                node.Type = nodeType;
-                // ReSharper disable AssignNullToNotNullAttribute
-                nodes.Add(nodeType, node);
-                // ReSharper restore AssignNullToNotNullAttribute                
+                if( node != null)
+                {
+                    node.Type = nodeType;
+                    // ReSharper disable AssignNullToNotNullAttribute
+                    nodes.Add(nodeType, node);
+                    // ReSharper restore AssignNullToNotNullAttribute         
+                }
+       
             }
 
             return nodes;
@@ -55,12 +59,12 @@ namespace NotAFractal.Data
         {
             var node = new FractalNode();
             var yaml = new YamlStream();
-            yaml.Load(input);
-
-            var mapping = (YamlMappingNode)yaml.Documents[0].RootNode;
 
             try
             {
+                yaml.Load(input);
+                var mapping = (YamlMappingNode)yaml.Documents[0].RootNode;
+
                 var titleScalar = new YamlScalarNode("Title");
                 if (mapping.Children.Keys.Contains(titleScalar))
                     node.Title = mapping.Children[titleScalar].ToString();
@@ -125,6 +129,7 @@ namespace NotAFractal.Data
             catch (Exception e)
             {
                 Debug.WriteLine(e);
+                return null;
             }
 
             return node;
