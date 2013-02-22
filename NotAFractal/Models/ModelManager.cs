@@ -62,17 +62,18 @@ namespace NotAFractal.Models
 
         public string ProcessDataGeneratorSymbols(int seed, string text)
         {
-            var symbols = Regex.Match(text, @"\$\w+\$").Groups;
+            var match = Regex.Match(text, @"\$\w+\$");
             var random = new Random(seed);
+            var nestedDepth = 20;
 
-            if(symbols.Count > 0)
-            {                
+            while (match.Success && nestedDepth > 0)
+            {
+                var symbols = match.Groups;
+
                 foreach (var symbol in symbols)
-                {
+                {                                       
                     var symbolString = symbol.ToString();
                     var strippedSymbol = symbolString.Replace("$",string.Empty);
-                    
-
 
                     if(_dataGenerators.ContainsKey(strippedSymbol))
                     {
@@ -80,6 +81,9 @@ namespace NotAFractal.Models
                         text = text.Replace(symbolString, generator.Generate(random.Next(1, int.MaxValue)));
                     }
                 }
+
+                nestedDepth--;
+                match = Regex.Match(text, @"\$\w+\$");
             }
 
             return text;
