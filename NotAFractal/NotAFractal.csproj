@@ -132,7 +132,7 @@
     <Compile Include="Models\Builders\NodeInformationViewModelBuilder.cs" />
     <Compile Include="Models\Builders\NodeViewModelBuilder.cs" />
     <Compile Include="Models\DataGenerator.cs" />
-    <Compile Include="Models\DataGeneratorEntry.cs" />
+    <Compile Include="Models\WeightedChoiceEntry.cs" />
     <Compile Include="Models\FractalNodeWeighted.cs" />
     <Compile Include="Models\StubModel.cs" />
     <Compile Include="Models\ViewModels\NodeInformationViewModel.cs" />
