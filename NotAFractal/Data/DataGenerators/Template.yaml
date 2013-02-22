@@ -6,7 +6,8 @@
 #You can use any number of the below blocks, which will strung together in sequence
 #These blocks will pick 1 of the entries in such a block, the choise is weighted by the number provided
 
-#IF you want to make a node option including an empty string with a heavy weight will acomplish this
+#If you want to make a node option including an empty string with a heavy weight will acomplish this
+#You can use DataGenerator Symbols in DataGenerators, just try to avoid infinite loops
 
 # - [String , weight]
 #Example
