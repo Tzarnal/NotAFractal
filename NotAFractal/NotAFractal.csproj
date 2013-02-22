@@ -150,6 +150,7 @@
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\site.css" />
+    <Content Include="Content\img\Symbols-Info-icon.png" />
     <Content Include="Global.asax" />
     <Content Include="Data\FractalNodes\Template.yaml" />
     <Content Include="Data\FractalNodes\RootNode.yaml" />

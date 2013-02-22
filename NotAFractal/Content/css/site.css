@@ -30,3 +30,7 @@
 .infoLink {
     cursor: pointer;
 }
+
+.infoLink img {
+    margin-left: 15px;
+}
