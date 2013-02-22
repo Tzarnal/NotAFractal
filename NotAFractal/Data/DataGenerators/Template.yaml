@@ -8,6 +8,7 @@
 
 #If you want to make a node option including an empty string with a heavy weight will acomplish this
 #You can use DataGenerator Symbols in DataGenerators, just try to avoid infinite loops
+#Using the same $symbol$ twice will have that symbol replace with the same data, keep this in mind.
 
 # - [String , weight]
 #Example

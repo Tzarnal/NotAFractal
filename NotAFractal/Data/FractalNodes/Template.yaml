@@ -4,6 +4,10 @@
 #Normally RootNode.yaml is the node used when you open the homepage
 #Everything Branches from RootNode.yaml
 
+#In any place you can use strings you can use datagenrator symbols ( $aword$ ) which will get replaced by data
+#from a datagenerator yaml file, the same $symbol$ will be replaced with the same thing 
+#in every entry as long as they are usedin the same order.
+
 Title:          A Template Title
 Name:           Name for this Template
 Text:           
