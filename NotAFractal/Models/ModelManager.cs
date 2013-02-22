@@ -62,9 +62,12 @@ namespace NotAFractal.Models
 
         public string ProcessDataGeneratorSymbols(int seed, string text)
         {
-            var match = Regex.Match(text, @"\$\w+\$");
-            var random = new Random(seed);
+            if (text == null)
+                return null;
+            
+            var match = Regex.Match(text, @"\$\w+\$");            
             var nestedDepth = 20;
+            var random = new Random(seed);
 
             while (match.Success && nestedDepth > 0)
             {
