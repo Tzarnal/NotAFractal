@@ -10,11 +10,15 @@ namespace NotAFractal.Models.Builders
     {
         public NodeInformationViewModel Build(int seed, FractalNode type)
         {
+            var random = new Random(seed);
+            var modelManager = ModelManager.Instance;
+            var dataGeneratorSeed = random.Next(1, int.MaxValue);
+            
             var nodeInformationViewModel = new NodeInformationViewModel
             {
-                Title = type.SidebarTitle,
-                Text = type.SidebarText,
-                Link = type.SidebarUrl,
+                Title = modelManager.ProcessDataGeneratorSymbols(dataGeneratorSeed, type.SidebarTitle),
+                Text = modelManager.ProcessDataGeneratorSymbols(dataGeneratorSeed, type.SidebarText),
+                Link = modelManager.ProcessDataGeneratorSymbols(dataGeneratorSeed, type.SidebarUrl),
 
                 Seed = seed,
                 Type = type.Type,

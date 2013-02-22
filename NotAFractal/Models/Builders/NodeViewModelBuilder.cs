@@ -10,12 +10,13 @@ namespace NotAFractal.Models.Builders
         {
             var random = new Random(seed);
             var modelManager = ModelManager.Instance;
+            var dataGeneratorSeed = random.Next(1, int.MaxValue);
 
             var nodeViewModel = new NodeViewModel
             {
-                Title = type.Title,
-                Name = type.Name,
-                Text = type.Text,
+                Title = modelManager.ProcessDataGeneratorSymbols(dataGeneratorSeed, type.Title),
+                Name = modelManager.ProcessDataGeneratorSymbols(dataGeneratorSeed, type.Name),
+                Text = modelManager.ProcessDataGeneratorSymbols(dataGeneratorSeed, type.Text),
 
                 Seed = seed,
                 Type = type.Type,
@@ -48,10 +49,11 @@ namespace NotAFractal.Models.Builders
         {
             var random = new Random(seed);
             var modelManager = ModelManager.Instance;
+            var dataGeneratorSeed = random.Next(1, int.MaxValue);
 
             var nodeViewModel = new NodeViewModel
             {
-                Title = modelManager.ProcessDataGeneratorSymbols(random.Next(0,int.MaxValue), type.Title),
+                Title = modelManager.ProcessDataGeneratorSymbols(dataGeneratorSeed, type.Title),
 
                 Seed = seed,
                 Type = type.Type,
