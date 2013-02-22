@@ -23,12 +23,12 @@ namespace NotAFractal.Models.Builders
             };
 
 
-            if (type.ChoiceNodes == null)
-                return nodeViewModel;
-
-            foreach (var choiceNode in type.PickChoiceNodes(random.Next(1, int.MaxValue)))
+            if (type.ChoiceNodes != null)
             {
-                nodeViewModel.ChildNodes.Add(modelManager.BuildNodeViewModelStub(random.Next(1, int.MaxValue), choiceNode));
+                foreach (var choiceNode in type.PickChoiceNodes(random.Next(1, int.MaxValue)))
+                {
+                    nodeViewModel.ChildNodes.Add(modelManager.BuildNodeViewModelStub(random.Next(1, int.MaxValue), choiceNode));
+                }
             }
 
             if (type.Nodes == null)
