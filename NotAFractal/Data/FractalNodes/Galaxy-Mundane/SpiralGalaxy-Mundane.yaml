@@ -1,0 +1,20 @@
+---
+Title:          Spiral Galaxy
+
+SidebarTitle:   Spiral Galaxy
+SidebarText:
+     A galaxy is a massive, gravitationally bound system consisting of stars, stellar remnants, and interstellar medium of gas and dust.
+     Spiral galaxies consist of a flat, rotating disk containing stars, gas and dust, and a central concentration of stars known as the bulge.
+SidebarURL:     http://en.wikipedia.org/wiki/Spiral_galaxy
+
+Nodes:
+    - Type:             GalaxyBulge-Mundane
+    - Type:             SpiralGalaxyHalo-Mundane   
+    - Type:             SpiralGalaxyArm-Mundane
+      MinAmount:        2
+      MaxAmount:        5
+    - Type:             SpiralGalaxyArm-Mundane
+      PercentageChance:	15
+      MinAmount:        1
+      MaxAmount:        10  
+...

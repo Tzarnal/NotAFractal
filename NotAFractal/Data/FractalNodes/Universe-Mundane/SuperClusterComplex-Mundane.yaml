@@ -1,0 +1,14 @@
+---
+Title:          Super Cluster Complex
+
+SidebarTitle:   Super Cluster Complex
+SidebarText:
+    Superclusters form large structures of galaxies, called "filaments", "supercluster complexes", "walls" or "sheets", that may span between several hundred million light-years to one billion light-years, covering more than 5% of the observable universe. 
+SidebarURL:     http://en.wikipedia.org/wiki/Supercluster 
+
+Nodes:
+    - Type:             SuperCluster-Mundane
+      PercentageChance: 100
+      MinAmount:        5
+      MaxAmount:        10
+...

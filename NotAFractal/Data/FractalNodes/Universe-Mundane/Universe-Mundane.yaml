@@ -1,0 +1,14 @@
+---
+Title:          Universe
+
+SidebarTitle:   Universe
+SidebarText:
+  
+SidebarURL:     http://en.wikipedia.org/wiki/Universe 
+
+Nodes:
+    - Type:             SuperClusterComplex-Mundane
+      PercentageChance: 100
+      MinAmount:        5
+      MaxAmount:        15
+...

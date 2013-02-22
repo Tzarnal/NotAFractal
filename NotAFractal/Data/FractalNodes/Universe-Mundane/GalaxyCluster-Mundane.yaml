@@ -1,0 +1,14 @@
+---
+Title:          Galaxy Cluster
+
+SidebarTitle:   Galaxy Cluster
+SidebarText:
+     A collection of gravitationally bound Galaxies
+SidebarURL:     http://en.wikipedia.org/wiki/Local_Group 
+
+Nodes:
+    - Type:             SpiralGalaxy-Mundane
+      PercentageChance: 100
+      MinAmount:        5
+      MaxAmount:        20
+...

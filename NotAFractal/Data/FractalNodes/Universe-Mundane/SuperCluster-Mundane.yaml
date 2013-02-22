@@ -1,0 +1,14 @@
+---
+Title:          Super Cluster
+
+SidebarTitle:   Super Cluster
+SidebarText:
+    Superclusters are large groups of smaller galaxy groups and clusters and are among the largest known structures of the cosmos.
+SidebarURL:     http://en.wikipedia.org/wiki/Supercluster 
+
+Nodes:
+    - Type:             GalaxyCluster-Mundane
+      PercentageChance: 100
+      MinAmount:        5
+      MaxAmount:        10
+...

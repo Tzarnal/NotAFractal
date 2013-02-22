@@ -8,8 +8,5 @@ SidebarURL:     http://github.com/Xesyto/NotAFractal
 SidebarTitle:   Not A Fractal
 
 Nodes:
-    - Type:             Node #This will be another node, specified in another .yaml file
-      PercentageChance: 100 #Percentage chance this node will actually be added, defaults to 100
-      MinAmount:        1 #Minum amount to add, defaults to 1
-      MaxAmount:        10 #Maximum amount to add, defaults to 1      
+    - Type:             Universe-Mundane
 ...
