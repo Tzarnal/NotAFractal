@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace NotAFractal.Models
 {
-    public class DataGeneratorEntry
+    public class WeightedChoiceEntry
     {
         public Dictionary<string, int> WeightedStrings { get; set; }
         public int TotalWeight { get; set; }

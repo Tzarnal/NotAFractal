@@ -125,6 +125,32 @@ namespace NotAFractal.Data
                         node.Nodes.Add(nodeWeighted);
                     }
                 }
+
+                var choiceNodesScalar = new YamlScalarNode("ChoiceNodes");
+                if(mapping.Children.Keys.Contains(choiceNodesScalar))
+                {
+                    var choiceNodes = (YamlSequenceNode) mapping.Children[choiceNodesScalar];
+                    node.ChoiceNodes = new List<WeightedChoiceEntry>();
+
+                    foreach (YamlSequenceNode choiceNode in choiceNodes)
+                    {
+                        var entry = new WeightedChoiceEntry {WeightedStrings = new Dictionary<string, int>()};
+
+                        foreach (YamlSequenceNode subnode in choiceNode)
+                        {
+                            var subnodeData = subnode.Children;
+
+                            var text = subnodeData[0].ToString();
+                            var weight = int.Parse(subnodeData[1].ToString());
+
+                            entry.TotalWeight += weight;
+                            entry.WeightedStrings.Add(text,weight);
+                        }
+
+                        node.ChoiceNodes.Add(entry);
+                    }
+
+                }
             }
             catch (Exception e)
             {

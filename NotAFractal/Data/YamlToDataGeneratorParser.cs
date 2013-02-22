@@ -54,7 +54,7 @@ namespace NotAFractal.Data
 
         private static DataGenerator ParseYamlFile(StreamReader input)
         {
-            var generator = new DataGenerator {DataGeneratorEntries = new List<DataGeneratorEntry>()};
+            var generator = new DataGenerator {DataGeneratorEntries = new List<WeightedChoiceEntry>()};
             var yaml = new YamlStream();
 
             try
@@ -64,7 +64,7 @@ namespace NotAFractal.Data
                 
                 foreach (YamlSequenceNode node in mapping)
                 {
-                    var generatorEntry = new DataGeneratorEntry {WeightedStrings = new Dictionary<string, int>()};
+                    var generatorEntry = new WeightedChoiceEntry {WeightedStrings = new Dictionary<string, int>()};
 
                     foreach (YamlSequenceNode subnode in node)
                     {

@@ -22,6 +22,15 @@ namespace NotAFractal.Models.Builders
                 Type = type.Type,
             };
 
+
+            if (type.ChoiceNodes == null)
+                return nodeViewModel;
+
+            foreach (var choiceNode in type.PickChoiceNodes(random.Next(1, int.MaxValue)))
+            {
+                nodeViewModel.ChildNodes.Add(modelManager.BuildNodeViewModelStub(random.Next(1, int.MaxValue), choiceNode));
+            }
+
             if (type.Nodes == null)
                 return nodeViewModel;
 
@@ -61,7 +70,8 @@ namespace NotAFractal.Models.Builders
 
             if( string.IsNullOrEmpty(type.Name) &&
                 string.IsNullOrEmpty(type.Text) &&
-                type.Nodes == null)
+                type.Nodes == null && 
+                type.ChoiceNodes == null)
             {
                 nodeViewModel.EmptyNode = true;
             }

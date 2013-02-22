@@ -8,7 +8,7 @@ namespace NotAFractal.Models
 {
     public class DataGenerator
     {
-        public List<DataGeneratorEntry> DataGeneratorEntries { get; set; }
+        public List<WeightedChoiceEntry> DataGeneratorEntries { get; set; }
 
         public string Generate(int seed)
         {

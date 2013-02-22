@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace NotAFractal.Models
 {
@@ -14,6 +17,13 @@ namespace NotAFractal.Models
         public string SidebarTitle { get; set; }
 
         public List<FractalNodeWeighted> Nodes { get; set; }
+        public List<WeightedChoiceEntry> ChoiceNodes { get; set; }
 
+        public List<string> PickChoiceNodes(int seed)
+        {
+            var random = new Random(seed);
+
+            return ChoiceNodes.Select(dataGeneratorEntry => dataGeneratorEntry.Generate(random.Next(1, int.MaxValue))).ToList();
+        }
     }
 }

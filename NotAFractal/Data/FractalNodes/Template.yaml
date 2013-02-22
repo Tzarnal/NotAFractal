@@ -20,6 +20,16 @@ SidebarText:
 SidebarURL:     Http://Google.com/ #Url link for "Would you like to know more" ( http:// should be included )
 SidebarTitle:   Title For the Sidebar
 
+#Choice nodes will choose one node Per subheader randomly but weighted
+#Its the same idea as DataGenerators.
+ChoiceNodes:
+  -
+    - [foo, 1]
+    - [bar, 1]
+    - [blub, 1]
+    - [blob, 1]
+
+
 Nodes:
     - Type:             NodeName #This will be another node, specified in another .yaml file
       PercentageChance: 50 #Percentage chance this node will actually be added, defaults to 100
