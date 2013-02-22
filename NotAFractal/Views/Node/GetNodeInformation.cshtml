@@ -11,6 +11,9 @@
 </p>
 
 <p>
-    Would you like to know <a href="@Model.Link" target="_blank">More</a>?<br/>
+    @if(!String.IsNullOrEmpty(Model.Link))
+    {
+        @: Would you like to know <a href="@Model.Link" target="_blank">More</a>?<br/>
+    }        
     <a href="@Url.Action("Root","Home",new {type = Model.Type, seed = Model.Seed})" target="_blank">Link</a> to this item.
 </p>

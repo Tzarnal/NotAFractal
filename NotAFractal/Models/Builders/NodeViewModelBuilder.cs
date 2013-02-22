@@ -59,6 +59,13 @@ namespace NotAFractal.Models.Builders
                 Type = type.Type,
             };
 
+            if( string.IsNullOrEmpty(type.Name) &&
+                string.IsNullOrEmpty(type.Text) &&
+                type.Nodes == null)
+            {
+                nodeViewModel.EmptyNode = true;
+            }
+
             return nodeViewModel;
         }
 
