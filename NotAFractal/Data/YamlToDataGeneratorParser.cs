@@ -18,7 +18,7 @@ namespace NotAFractal.Data
             if(path == null)
                 throw new FileNotFoundException();
 
-            var generatorFiles = Directory.GetFiles(path, "*.yaml");
+            var generatorFiles = Directory.GetFiles(path, "*.yaml", SearchOption.AllDirectories);
 
             foreach (var generatorFile in generatorFiles)
             {

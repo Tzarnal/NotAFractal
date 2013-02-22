@@ -18,7 +18,7 @@ namespace NotAFractal.Data
                 throw new FileNotFoundException();
 
             var nodes = new Dictionary<string, FractalNode>();
-            var nodeFiles = Directory.GetFiles(path, "*.yaml");
+            var nodeFiles = Directory.GetFiles(path, "*.yaml", SearchOption.AllDirectories);
 
             foreach (var nodeFile in nodeFiles)
             {                                
