@@ -1,0 +1,15 @@
+---
+Title:          Fluorine
+
+SidebarTitle:   Fluorine
+SidebarText:  
+  Element Symbol F <br>
+  Atomic Number 9 
+SidebarURL:     http://en.wikipedia.org/wiki/Fluorine
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

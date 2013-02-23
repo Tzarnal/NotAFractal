@@ -1,0 +1,15 @@
+---
+Title:          Lawrencium
+
+SidebarTitle:   Lawrencium
+SidebarText:  
+  Element Symbol Lr <br>
+  Atomic Number 103 
+SidebarURL:     http://en.wikipedia.org/wiki/Lawrencium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

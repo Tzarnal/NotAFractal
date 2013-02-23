@@ -1,0 +1,15 @@
+---
+Title:          Samarium
+
+SidebarTitle:   Samarium
+SidebarText:  
+  Element Symbol Sm <br>
+  Atomic Number 62 
+SidebarURL:     http://en.wikipedia.org/wiki/Samarium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

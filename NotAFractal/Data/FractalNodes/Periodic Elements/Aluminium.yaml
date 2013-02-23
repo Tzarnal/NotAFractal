@@ -1,0 +1,15 @@
+---
+Title:          Aluminium
+
+SidebarTitle:   Aluminium
+SidebarText:  
+  Element Symbol Al <br>
+  Atomic Number 13 
+SidebarURL:     http://en.wikipedia.org/wiki/Aluminium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

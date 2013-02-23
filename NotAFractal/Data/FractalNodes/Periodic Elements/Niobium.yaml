@@ -1,0 +1,15 @@
+---
+Title:          Niobium
+
+SidebarTitle:   Niobium
+SidebarText:  
+  Element Symbol Nb <br>
+  Atomic Number 41 
+SidebarURL:     http://en.wikipedia.org/wiki/Niobium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

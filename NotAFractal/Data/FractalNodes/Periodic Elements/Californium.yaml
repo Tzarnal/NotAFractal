@@ -1,0 +1,15 @@
+---
+Title:          Californium
+
+SidebarTitle:   Californium
+SidebarText:  
+  Element Symbol Cf <br>
+  Atomic Number 98 
+SidebarURL:     http://en.wikipedia.org/wiki/Californium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

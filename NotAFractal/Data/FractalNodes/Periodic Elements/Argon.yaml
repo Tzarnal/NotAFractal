@@ -1,0 +1,15 @@
+---
+Title:          Argon
+
+SidebarTitle:   Argon
+SidebarText:  
+  Element Symbol Ar <br>
+  Atomic Number 18 
+SidebarURL:     http://en.wikipedia.org/wiki/Argon
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

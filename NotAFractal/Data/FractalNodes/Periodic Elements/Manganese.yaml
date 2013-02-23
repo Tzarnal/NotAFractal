@@ -1,0 +1,15 @@
+---
+Title:          Manganese
+
+SidebarTitle:   Manganese
+SidebarText:  
+  Element Symbol Mn <br>
+  Atomic Number 25 
+SidebarURL:     http://en.wikipedia.org/wiki/Manganese
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

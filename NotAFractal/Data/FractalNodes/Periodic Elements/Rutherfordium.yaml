@@ -1,0 +1,15 @@
+---
+Title:          Rutherfordium
+
+SidebarTitle:   Rutherfordium
+SidebarText:  
+  Element Symbol Rf <br>
+  Atomic Number 104 
+SidebarURL:     http://en.wikipedia.org/wiki/Rutherfordium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

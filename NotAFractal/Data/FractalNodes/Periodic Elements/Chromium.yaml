@@ -1,0 +1,15 @@
+---
+Title:          Chromium
+
+SidebarTitle:   Chromium
+SidebarText:  
+  Element Symbol Cr <br>
+  Atomic Number 24 
+SidebarURL:     http://en.wikipedia.org/wiki/Chromium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

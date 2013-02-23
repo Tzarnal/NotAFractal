@@ -1,0 +1,15 @@
+---
+Title:          Sodium
+
+SidebarTitle:   Sodium
+SidebarText:  
+  Element Symbol Na <br>
+  Atomic Number 11 
+SidebarURL:     http://en.wikipedia.org/wiki/Sodium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

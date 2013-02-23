@@ -1,0 +1,15 @@
+---
+Title:          Livermorium
+
+SidebarTitle:   Livermorium
+SidebarText:  
+  Element Symbol Lv <br>
+  Atomic Number 116 
+SidebarURL:     http://en.wikipedia.org/wiki/Livermorium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

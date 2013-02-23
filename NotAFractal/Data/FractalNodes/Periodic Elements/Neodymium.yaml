@@ -1,0 +1,15 @@
+---
+Title:          Neodymium
+
+SidebarTitle:   Neodymium
+SidebarText:  
+  Element Symbol Nd <br>
+  Atomic Number 60 
+SidebarURL:     http://en.wikipedia.org/wiki/Neodymium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

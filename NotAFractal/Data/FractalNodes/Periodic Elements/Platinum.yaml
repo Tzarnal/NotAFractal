@@ -1,0 +1,15 @@
+---
+Title:          Platinum
+
+SidebarTitle:   Platinum
+SidebarText:  
+  Element Symbol Pt <br>
+  Atomic Number 78 
+SidebarURL:     http://en.wikipedia.org/wiki/Platinum
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

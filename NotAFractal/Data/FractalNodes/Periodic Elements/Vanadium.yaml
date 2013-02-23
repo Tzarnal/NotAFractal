@@ -1,0 +1,15 @@
+---
+Title:          Vanadium
+
+SidebarTitle:   Vanadium
+SidebarText:  
+  Element Symbol V <br>
+  Atomic Number 23 
+SidebarURL:     http://en.wikipedia.org/wiki/Vanadium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

@@ -1,0 +1,15 @@
+---
+Title:          Xenon
+
+SidebarTitle:   Xenon
+SidebarText:  
+  Element Symbol Xe <br>
+  Atomic Number 54 
+SidebarURL:     http://en.wikipedia.org/wiki/Xenon
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

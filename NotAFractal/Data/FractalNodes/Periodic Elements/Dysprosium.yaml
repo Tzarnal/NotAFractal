@@ -1,0 +1,15 @@
+---
+Title:          Dysprosium
+
+SidebarTitle:   Dysprosium
+SidebarText:  
+  Element Symbol Dy <br>
+  Atomic Number 66 
+SidebarURL:     http://en.wikipedia.org/wiki/Dysprosium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

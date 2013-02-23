@@ -1,0 +1,15 @@
+---
+Title:          Tungsten
+
+SidebarTitle:   Tungsten
+SidebarText:  
+  Element Symbol W <br>
+  Atomic Number 74 
+SidebarURL:     http://en.wikipedia.org/wiki/Tungsten
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

@@ -1,0 +1,15 @@
+---
+Title:          Yttrium
+
+SidebarTitle:   Yttrium
+SidebarText:  
+  Element Symbol Y <br>
+  Atomic Number 39 
+SidebarURL:     http://en.wikipedia.org/wiki/Yttrium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

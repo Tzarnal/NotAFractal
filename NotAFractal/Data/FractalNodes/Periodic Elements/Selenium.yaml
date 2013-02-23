@@ -1,0 +1,15 @@
+---
+Title:          Selenium
+
+SidebarTitle:   Selenium
+SidebarText:  
+  Element Symbol Se <br>
+  Atomic Number 34 
+SidebarURL:     http://en.wikipedia.org/wiki/Selenium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

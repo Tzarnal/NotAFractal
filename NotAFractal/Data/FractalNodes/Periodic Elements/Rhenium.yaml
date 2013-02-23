@@ -1,0 +1,15 @@
+---
+Title:          Rhenium
+
+SidebarTitle:   Rhenium
+SidebarText:  
+  Element Symbol Re <br>
+  Atomic Number 75 
+SidebarURL:     http://en.wikipedia.org/wiki/Rhenium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

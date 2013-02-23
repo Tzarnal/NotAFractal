@@ -1,0 +1,15 @@
+---
+Title:          Seaborgium
+
+SidebarTitle:   Seaborgium
+SidebarText:  
+  Element Symbol Sg <br>
+  Atomic Number 106 
+SidebarURL:     http://en.wikipedia.org/wiki/Seaborgium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

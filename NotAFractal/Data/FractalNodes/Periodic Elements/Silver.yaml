@@ -1,0 +1,15 @@
+---
+Title:          Silver
+
+SidebarTitle:   Silver
+SidebarText:  
+  Element Symbol Ag <br>
+  Atomic Number 47 
+SidebarURL:     http://en.wikipedia.org/wiki/Silver
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

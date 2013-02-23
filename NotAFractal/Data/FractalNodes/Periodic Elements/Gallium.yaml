@@ -1,0 +1,15 @@
+---
+Title:          Gallium
+
+SidebarTitle:   Gallium
+SidebarText:  
+  Element Symbol Ga <br>
+  Atomic Number 31 
+SidebarURL:     http://en.wikipedia.org/wiki/Gallium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

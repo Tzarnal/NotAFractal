@@ -1,0 +1,15 @@
+---
+Title:          Zirconium
+
+SidebarTitle:   Zirconium
+SidebarText:  
+  Element Symbol Zr <br>
+  Atomic Number 40 
+SidebarURL:     http://en.wikipedia.org/wiki/Zirconium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

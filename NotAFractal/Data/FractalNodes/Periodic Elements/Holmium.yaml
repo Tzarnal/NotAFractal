@@ -1,0 +1,15 @@
+---
+Title:          Holmium
+
+SidebarTitle:   Holmium
+SidebarText:  
+  Element Symbol Ho <br>
+  Atomic Number 67 
+SidebarURL:     http://en.wikipedia.org/wiki/Holmium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

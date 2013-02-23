@@ -1,0 +1,15 @@
+---
+Title:          Zinc
+
+SidebarTitle:   Zinc
+SidebarText:  
+  Element Symbol Zn <br>
+  Atomic Number 30 
+SidebarURL:     http://en.wikipedia.org/wiki/Zinc
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

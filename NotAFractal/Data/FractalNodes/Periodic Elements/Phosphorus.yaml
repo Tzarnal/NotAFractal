@@ -1,0 +1,15 @@
+---
+Title:          Phosphorus
+
+SidebarTitle:   Phosphorus
+SidebarText:  
+  Element Symbol P <br>
+  Atomic Number 15 
+SidebarURL:     http://en.wikipedia.org/wiki/Phosphorus
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

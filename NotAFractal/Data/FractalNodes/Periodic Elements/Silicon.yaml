@@ -1,0 +1,15 @@
+---
+Title:          Silicon
+
+SidebarTitle:   Silicon
+SidebarText:  
+  Element Symbol Si <br>
+  Atomic Number 14 
+SidebarURL:     http://en.wikipedia.org/wiki/Silicon
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

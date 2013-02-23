@@ -1,0 +1,15 @@
+---
+Title:          Bohrium
+
+SidebarTitle:   Bohrium
+SidebarText:  
+  Element Symbol Bh <br>
+  Atomic Number 107 
+SidebarURL:     http://en.wikipedia.org/wiki/Bohrium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

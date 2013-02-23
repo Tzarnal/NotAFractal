@@ -1,0 +1,15 @@
+---
+Title:          Dubnium
+
+SidebarTitle:   Dubnium
+SidebarText:  
+  Element Symbol Db <br>
+  Atomic Number 105 
+SidebarURL:     http://en.wikipedia.org/wiki/Dubnium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

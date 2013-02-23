@@ -1,0 +1,15 @@
+---
+Title:          Boron
+
+SidebarTitle:   Boron
+SidebarText:  
+  Element Symbol B <br>
+  Atomic Number 5 
+SidebarURL:     http://en.wikipedia.org/wiki/Boron
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

@@ -1,0 +1,15 @@
+---
+Title:          Erbium
+
+SidebarTitle:   Erbium
+SidebarText:  
+  Element Symbol Er <br>
+  Atomic Number 68 
+SidebarURL:     http://en.wikipedia.org/wiki/Erbium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

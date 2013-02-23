@@ -1,0 +1,15 @@
+---
+Title:          Lanthanum
+
+SidebarTitle:   Lanthanum
+SidebarText:  
+  Element Symbol La <br>
+  Atomic Number 57 
+SidebarURL:     http://en.wikipedia.org/wiki/Lanthanum
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

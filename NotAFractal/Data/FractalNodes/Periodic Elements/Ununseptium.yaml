@@ -1,0 +1,15 @@
+---
+Title:          Ununseptium
+
+SidebarTitle:   Ununseptium
+SidebarText:  
+  Element Symbol Uus <br>
+  Atomic Number 117 
+SidebarURL:     http://en.wikipedia.org/wiki/Ununseptium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

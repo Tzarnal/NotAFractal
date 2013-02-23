@@ -1,0 +1,15 @@
+---
+Title:          Curium
+
+SidebarTitle:   Curium
+SidebarText:  
+  Element Symbol Cm <br>
+  Atomic Number 96 
+SidebarURL:     http://en.wikipedia.org/wiki/Curium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

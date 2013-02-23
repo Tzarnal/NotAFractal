@@ -1,0 +1,15 @@
+---
+Title:          Americium
+
+SidebarTitle:   Americium
+SidebarText:  
+  Element Symbol Am <br>
+  Atomic Number 95 
+SidebarURL:     http://en.wikipedia.org/wiki/Americium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

@@ -1,0 +1,15 @@
+---
+Title:          Europium
+
+SidebarTitle:   Europium
+SidebarText:  
+  Element Symbol Eu <br>
+  Atomic Number 63 
+SidebarURL:     http://en.wikipedia.org/wiki/Europium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

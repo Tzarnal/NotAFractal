@@ -1,0 +1,15 @@
+---
+Title:          Nickel
+
+SidebarTitle:   Nickel
+SidebarText:  
+  Element Symbol Ni <br>
+  Atomic Number 28 
+SidebarURL:     http://en.wikipedia.org/wiki/Nickel
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

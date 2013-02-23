@@ -1,0 +1,15 @@
+---
+Title:          Gold
+
+SidebarTitle:   Gold
+SidebarText:  
+  Element Symbol Au <br>
+  Atomic Number 79 
+SidebarURL:     http://en.wikipedia.org/wiki/Gold
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

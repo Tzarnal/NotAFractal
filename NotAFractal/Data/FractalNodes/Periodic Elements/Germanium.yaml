@@ -1,0 +1,15 @@
+---
+Title:          Germanium
+
+SidebarTitle:   Germanium
+SidebarText:  
+  Element Symbol Ge <br>
+  Atomic Number 32 
+SidebarURL:     http://en.wikipedia.org/wiki/Germanium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

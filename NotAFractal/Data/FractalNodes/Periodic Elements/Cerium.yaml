@@ -1,0 +1,15 @@
+---
+Title:          Cerium
+
+SidebarTitle:   Cerium
+SidebarText:  
+  Element Symbol Ce <br>
+  Atomic Number 58 
+SidebarURL:     http://en.wikipedia.org/wiki/Cerium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

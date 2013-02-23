@@ -1,0 +1,15 @@
+---
+Title:          Barium
+
+SidebarTitle:   Barium
+SidebarText:  
+  Element Symbol Ba <br>
+  Atomic Number 56 
+SidebarURL:     http://en.wikipedia.org/wiki/Barium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

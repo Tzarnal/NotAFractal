@@ -1,0 +1,15 @@
+---
+Title:          Rubidium
+
+SidebarTitle:   Rubidium
+SidebarText:  
+  Element Symbol Rb <br>
+  Atomic Number 37 
+SidebarURL:     http://en.wikipedia.org/wiki/Rubidium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

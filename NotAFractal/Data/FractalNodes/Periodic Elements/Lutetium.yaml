@@ -1,0 +1,15 @@
+---
+Title:          Lutetium
+
+SidebarTitle:   Lutetium
+SidebarText:  
+  Element Symbol Lu <br>
+  Atomic Number 71 
+SidebarURL:     http://en.wikipedia.org/wiki/Lutetium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

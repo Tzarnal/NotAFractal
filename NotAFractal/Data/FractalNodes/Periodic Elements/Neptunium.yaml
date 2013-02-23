@@ -1,0 +1,15 @@
+---
+Title:          Neptunium
+
+SidebarTitle:   Neptunium
+SidebarText:  
+  Element Symbol Np <br>
+  Atomic Number 93 
+SidebarURL:     http://en.wikipedia.org/wiki/Neptunium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

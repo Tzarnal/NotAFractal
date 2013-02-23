@@ -1,0 +1,15 @@
+---
+Title:          Terbium
+
+SidebarTitle:   Terbium
+SidebarText:  
+  Element Symbol Tb <br>
+  Atomic Number 65 
+SidebarURL:     http://en.wikipedia.org/wiki/Terbium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

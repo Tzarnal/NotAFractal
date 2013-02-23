@@ -1,0 +1,15 @@
+---
+Title:          Carbon
+
+SidebarTitle:   Carbon
+SidebarText:  
+  Element Symbol C <br>
+  Atomic Number 6 
+SidebarURL:     http://en.wikipedia.org/wiki/Carbon
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

@@ -1,0 +1,15 @@
+---
+Title:          Uranium
+
+SidebarTitle:   Uranium
+SidebarText:  
+  Element Symbol U <br>
+  Atomic Number 92 
+SidebarURL:     http://en.wikipedia.org/wiki/Uranium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...

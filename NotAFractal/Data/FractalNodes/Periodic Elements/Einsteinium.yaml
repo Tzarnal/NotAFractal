@@ -1,0 +1,15 @@
+---
+Title:          Einsteinium
+
+SidebarTitle:   Einsteinium
+SidebarText:  
+  Element Symbol Es <br>
+  Atomic Number 99 
+SidebarURL:     http://en.wikipedia.org/wiki/Einsteinium
+
+Nodes:
+    - Type:             Proton
+    - Type:             Neutron  
+    - Type:             Electron
+    
+...
