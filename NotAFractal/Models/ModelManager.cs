@@ -64,25 +64,36 @@ namespace NotAFractal.Models
         {
             if (text == null)
                 return null;
-            
-            var match = Regex.Match(text, @"\$\w+\$");            
+
+            var match = Regex.Match(text, @"\$[\w\d-]+\$");            
             var nestedDepth = 20;
             var random = new Random(seed);
 
             while (match.Success && nestedDepth > 0)
             {
                 var symbols = match.Groups;
-
+                
                 foreach (var symbol in symbols)
-                {                                       
+                {
                     var symbolString = symbol.ToString();
-                    var strippedSymbol = symbolString.Replace("$",string.Empty);
+                    var strippedSymbol = symbolString.Replace("$", string.Empty);
+
+                    //Random number insertion
+                    var randMatch = Regex.Match(strippedSymbol, @"Random-(\d+)-(\d+)");
+                    if( randMatch.Success)
+                    {
+                        int min = int.Parse(randMatch.Groups[1].Value);
+                        int max = int.Parse(randMatch.Groups[2].Value);
+
+                        text = text.Replace(symbolString, random.Next(min,max).ToString());
+                    }
 
                     if(_dataGenerators.ContainsKey(strippedSymbol))
                     {
                         var generator = _dataGenerators[strippedSymbol];
                         text = text.Replace(symbolString, generator.Generate(random.Next(1, int.MaxValue)));
                     }
+
                 }
 
                 nestedDepth--;
