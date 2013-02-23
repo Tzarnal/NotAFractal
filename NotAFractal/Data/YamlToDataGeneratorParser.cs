@@ -41,25 +41,26 @@ namespace NotAFractal.Data
             {
                 using (var input = new StreamReader(fileName))
                 {
-                    return ParseYamlFile(input);
+                    var yaml = new YamlStream();
+                    yaml.Load(input);
+                    
+                    return ParseYamlFile(yaml);
                 }
             }
             catch (Exception)
             {
-                Debug.WriteLine("Error Opening: " + fileName);
-
+                Debug.WriteLine("Error Opening/Parsing: " + fileName);                
                 throw;
             }            
         }
 
-        private static DataGenerator ParseYamlFile(StreamReader input)
+        private static DataGenerator ParseYamlFile(YamlStream yaml)
         {
             var generator = new DataGenerator {DataGeneratorEntries = new List<WeightedChoiceEntry>()};
-            var yaml = new YamlStream();
+            //See YamlToNodePArser.cs to get a better idea of how handle yamldontnet 
 
             try
             {
-                yaml.Load(input);
                 var mapping = (YamlSequenceNode)yaml.Documents[0].RootNode;
                 
                 foreach (YamlSequenceNode node in mapping)
@@ -71,13 +72,13 @@ namespace NotAFractal.Data
                         var subnodeData = subnode.Children;
                         
                         var text = subnodeData[0].ToString();
+                        
+                        //Parsing into an int can be tricky and users are likely to put in something that won't parse so we need more sanity checks here
                         var weight = 1;
-
                         if(!int.TryParse( subnodeData[1].ToString(), out weight))
                         {
                             Debug.WriteLine("Could not parse int from subnode: {0} defaulting to 1", subnode);
                         }
-
 
                         generatorEntry.TotalWeight += weight;
                         generatorEntry.WeightedStrings.Add(text,weight);

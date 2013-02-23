@@ -31,39 +31,42 @@ namespace NotAFractal.Data
                     // ReSharper disable AssignNullToNotNullAttribute
                     nodes.Add(nodeType, node);
                     // ReSharper restore AssignNullToNotNullAttribute         
-                }
-       
+                }       
             }
 
             return nodes;
         }
 
         private static FractalNode ReadFile(string fileName)
-        {           
+        {
             try
             {
                 using (var input = new StreamReader(fileName))
                 {
-                    return ParseYamlFile(input);
+                    var yaml = new YamlStream();
+                    yaml.Load(input);
+
+                    return ParseYamlFile(yaml);
                 }
             }
             catch (Exception)
-            {                
-                Debug.WriteLine("Error Opening {0}",fileName );
-
+            {
+                Debug.WriteLine("Error Opening/Parsing: " + fileName);
                 throw;
-            }
+            } 
         }
 
-        private static FractalNode ParseYamlFile(StreamReader input)
+        private static FractalNode ParseYamlFile(YamlStream yaml)
         {
             var node = new FractalNode();
-            var yaml = new YamlStream();
-
+  
             try
             {
-                yaml.Load(input);
                 var mapping = (YamlMappingNode)yaml.Documents[0].RootNode;
+
+                //the mapping is index with yamlscalars and not strings
+                //So we need to build a new yamlscalarnode for every named entry
+                //Before checking them and adding them ot the node.
 
                 var titleScalar = new YamlScalarNode("Title");
                 if (mapping.Children.Keys.Contains(titleScalar))
@@ -89,15 +92,17 @@ namespace NotAFractal.Data
                 if (mapping.Children.Keys.Contains(sideUrlScalar))
                     node.SidebarUrl = mapping.Children[sideUrlScalar].ToString();
 
+                //Check for a nodes node, if it exists iterate over all its children
                 var nodesScalar = new YamlScalarNode("Nodes");
                 if (mapping.Children.Keys.Contains(nodesScalar))
-                {
+                {                    
                     var subnodes = (YamlSequenceNode) mapping.Children[nodesScalar];
                     
                     foreach (YamlMappingNode subnode in subnodes)
                     {
                         var nodeWeighted = new FractalNodeWeighted();
 
+                        //check for a type entry, and if it exists add it, Type is the one mandatory entry
                         var typeScalar = new YamlScalarNode("Type");
                         if(subnode.Children.Keys.Contains(typeScalar))
                         {
@@ -108,15 +113,69 @@ namespace NotAFractal.Data
                             break; //if there is no Type this entry isn't meaningful
                         }
 
+                        //Parsing into an int can be tricky and users are likely to put in something that won't parse so we need more sanity checks here
                         var chanceScalar = new YamlScalarNode("PercentageChance");
-                        nodeWeighted.PercentageChance = subnode.Children.Keys.Contains(chanceScalar) ? int.Parse(subnode.Children[chanceScalar].ToString()) : 100;
-                                                    
-                        var minScalar = new YamlScalarNode("MinAmount");
-                        nodeWeighted.MinAmount = subnode.Children.Keys.Contains(minScalar) ? int.Parse(subnode.Children[minScalar].ToString()) : 1;
+                        if (subnode.Children.Keys.Contains(chanceScalar))
+                        {
+                            var amount = 1;
 
-                        var maxScalar = new YamlScalarNode("MaxAmount");
-                        nodeWeighted.MaxAmount = subnode.Children.Keys.Contains(maxScalar) ? int.Parse(subnode.Children[maxScalar].ToString()) : 1;
+                            if (!int.TryParse(subnode.Children[chanceScalar].ToString(), out amount))
+                            {
+                                Debug.WriteLine("Could not parse int from subnode: {0} defaulting to 1", subnode);
+                            }
+
+                            if( amount > 0 && amount <= 100)
+                            {
+                                nodeWeighted.PercentageChance = amount;    
+                            }
+                            else
+                            {
+                                nodeWeighted.PercentageChance = 100;
+                            }
+                            
+                        }
+                        else
+                        {
+                            nodeWeighted.PercentageChance = 100;
+                        }
+                            
                         
+
+                        //need to do things a bit more complex because minimum may not exceed maximum                                                        
+                        var maxScalar = new YamlScalarNode("MaxAmount");
+                        if (subnode.Children.Keys.Contains(maxScalar))
+                        {
+                            var amount = 1;
+
+                            if (!int.TryParse(subnode.Children[maxScalar].ToString(), out amount))
+                            {
+                                Debug.WriteLine("Could not parse int from subnode: {0} defaulting to 1", subnode);
+                            }
+
+                            nodeWeighted.MaxAmount = amount;
+                        }
+                        else
+                        {
+                            nodeWeighted.MaxAmount = 1;
+                        }
+
+                        var minScalar = new YamlScalarNode("MinAmount");
+                        if (subnode.Children.Keys.Contains(minScalar))
+                        {
+                            var amount = 1;
+
+                            if (!int.TryParse(subnode.Children[minScalar].ToString(), out amount))
+                            {
+                                Debug.WriteLine("Could not parse int from subnode: {0} defaulting to 1", subnode);
+                            }
+
+                            nodeWeighted.MinAmount = (amount > nodeWeighted.MaxAmount) ? nodeWeighted.MaxAmount : amount;
+                        }
+                        else
+                        {
+                            nodeWeighted.MinAmount = nodeWeighted.MaxAmount;
+                        }
+
                         if(node.Nodes == null)
                         {
                             node.Nodes = new List<FractalNodeWeighted>();
@@ -147,7 +206,6 @@ namespace NotAFractal.Data
                             {
                                 Debug.WriteLine("Could not parse int from subnode: {0} defaulting to 1", subnode);
                             }
-
 
                             entry.TotalWeight += weight;
                             entry.WeightedStrings.Add(text,weight);
