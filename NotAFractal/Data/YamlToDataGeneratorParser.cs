@@ -71,7 +71,13 @@ namespace NotAFractal.Data
                         var subnodeData = subnode.Children;
                         
                         var text = subnodeData[0].ToString();
-                        var weight = int.Parse(subnodeData[1].ToString());
+                        var weight = 1;
+
+                        if(!int.TryParse( subnodeData[1].ToString(), out weight))
+                        {
+                            Debug.WriteLine("Could not parse int from subnode: {0} defaulting to 1", subnode);
+                        }
+
 
                         generatorEntry.TotalWeight += weight;
                         generatorEntry.WeightedStrings.Add(text,weight);
