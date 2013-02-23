@@ -1,0 +1,38 @@
+---
+Title:          Trace Elements
+
+SidebarTitle:   Trace Elements
+SidebarText:
+   Stars mostly consist of Hydrogen Helium and basic fusion products of those two. However they also contain traces of other elements.
+
+
+Nodes:
+    - Type:             Carbon
+    
+    - Type:             Neon
+      PercentageChance: 30
+
+    - Type:             Oxygen
+      PercentageChance: 15
+
+    - Type:             Silicon
+      PercentageChance: 10
+
+    - Type:             Iron
+      PercentageChance: 5
+
+    - Type:             Mercury
+      PercentageChance: 5
+
+    - Type:             Manganese
+      PercentageChance: 5
+
+    - Type:             Lead
+      PercentageChance: 5
+
+    - Type:             Barium
+      PercentageChance: 5                
+
+    - Type:             Technetium
+      PercentageChance: 5  
+...

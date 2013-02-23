@@ -6,4 +6,10 @@ SidebarText:
    A star is a massive, luminous sphere of plasma held together by gravity.
 SidebarURL:     http://en.wikipedia.org/wiki/Star
 
+Nodes:
+    - Type:             Hydrogen
+    - Type:             Helium  
+    
+    - Type:             StarTraceElements
+      PercentageChance: 60  
 ...

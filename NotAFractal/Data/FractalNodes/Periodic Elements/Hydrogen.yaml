@@ -10,6 +10,5 @@ SidebarURL:     http://en.wikipedia.org/wiki/Hydrogen
 Nodes:
     - Type:             Proton
     - Type:             Neutron  
-    - Type:             Electron
-    
+    - Type:             Electron    
 ...
