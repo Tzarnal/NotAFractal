@@ -14,7 +14,7 @@ Nodes:
 
     - Type:             SpiralGalaxyArm-Mundane
       MinAmount:        2
-      MaxAmount:        5
+      MaxAmount:        8
     
     - Type:             SpiralGalaxyArm-Mundane
       PercentageChance:	15
