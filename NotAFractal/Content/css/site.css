@@ -23,6 +23,11 @@
     font-family: monospace;
 }
 
+.treeViewEmptyToggleIndicator {
+    margin: 1px;
+    font-family: monospace;
+}
+
 .toggleLink {
     cursor: default;
 }
