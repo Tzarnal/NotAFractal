@@ -48,6 +48,7 @@ toggle = function() {
     ;
 };
 
+//source: http://css-tricks.com/scrollfollow-sidebar/
 $(function () {
 
     var $sidebar = $("#sidebar"),
