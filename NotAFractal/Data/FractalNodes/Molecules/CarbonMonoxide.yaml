@@ -1,0 +1,12 @@
+---
+Title:          Carbon Monoxide
+
+SidebarTitle:   Carbon Monoxide
+SidebarText:  
+    Carbon monoxide (CO) is a colorless, odorless, and tasteless gas that is slightly lighter than air.    
+SidebarURL:     http://en.wikipedia.org/wiki/Carbon_monoxide
+    
+Nodes:
+    - Type:             Carbon
+    - Type:             Oxygen    
+...

@@ -6,4 +6,8 @@ SidebarText:
    A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
 SidebarURL:     http://en.wikipedia.org/wiki/Nebula
 
+Nodes:
+    - Type: CosmicDust-Mundane
+    - Type: Hydrogen
+    - Type: Helium
 ...

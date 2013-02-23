@@ -1,0 +1,12 @@
+---
+Title:          Silicon Carbide
+
+SidebarTitle:   Silicon Carbide
+SidebarText:  
+    Silicon carbide (SiC), also known as carborundum is a compound of silicon and carbon with chemical formula SiC.     
+SidebarURL:     http://en.wikipedia.org/wiki/Silicon_carbide
+
+Nodes:
+    - Type:             Carbon
+    - Type:             Silicon    
+...

@@ -1,0 +1,26 @@
+---
+Title:          Silicate
+
+SidebarTitle:   Silicate
+SidebarText:  
+    A silicate is a compound containing a silicon bearing anion. Silicates comprise the majority of the crust of terrestrial planets, rocky moons, and asteroids. 
+SidebarURL:     http://en.wikipedia.org/wiki/Silicate
+
+ChoiceNodes:
+    -
+        - [Beryllium, 1]
+        - [Zinc, 1]
+        - [Magnesium, 1]
+        - [Iron,1]
+        - [Manganese,1]
+        - [Calcium, 1]
+        - [Chromium, 1]
+        - [Aluminium, 1]
+        - [Boron, 1]
+        - [Sulfur, 1]
+        
+Nodes:
+    - Type:             Oxygen
+    - Type:             Silicon
+
+...

@@ -1,0 +1,26 @@
+---
+Title:          Cosmic Dust
+
+SidebarTitle:   Cosmic Dust
+SidebarText:  
+  Cosmic dust, space dust, dust in SPAAAAACE.  
+SidebarURL:     http://en.wikipedia.org/wiki/Cosmic_dust
+
+ChoiceNodes:
+    -
+        - [Silica, 1]
+        - [Silicate, 1]
+
+Nodes:
+    - Type:             CarbonMonoxide
+      PercentageChance: 20    
+    
+    - Type:             SiliconCarbide  
+      PercentageChance: 20
+
+    - Type:             Water-Mundane
+      PercentageChance: 20
+
+    - Type:             Carbon    
+      PercentageChance: 20
+...

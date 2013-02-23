@@ -35,4 +35,25 @@ Nodes:
 
     - Type:             Technetium
       PercentageChance: 5  
+
+    - Type:             Gold
+      PercentageChance: 5  
+
+    - Type:             Boron
+      PercentageChance: 5  
+
+    - Type:             Argon
+      PercentageChance: 5  
+
+    - Type:             Copper
+      PercentageChance: 5                          
+
+    - Type:             Krypton
+      PercentageChance: 5
+
+    - Type:             Plutonium
+      PercentageChance: 5 
+
+    - Type:             Tungsten
+      PercentageChance: 5 
 ...

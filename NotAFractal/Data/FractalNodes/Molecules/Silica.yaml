@@ -1,0 +1,13 @@
+---
+Title:          Silica
+
+SidebarTitle:   Silica
+SidebarText:  
+    Silicon dioxide, also known as silica (from the Latin silex), is a chemical compound that is an oxide of silicon with the chemical formula SiO2. It has been known for its hardness since ancient times. Silica is most commonly found in nature as sand or quartz.
+SidebarURL:     http://en.wikipedia.org/wiki/Silica
+
+Nodes:
+    - Type:             Oxygen
+    - Type:             Silicon
+        
+...
