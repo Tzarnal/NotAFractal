@@ -1,0 +1,25 @@
+---
+Title:          Quasar
+
+SidebarTitle:   Quasar
+SidebarText:
+  A quasi-stellar radio source ("quasar") is a very energetic and distant active galactic nucleus. Quasars are extremely luminous and were first identified as being high redshift sources of electromagnetic energy, including radio waves and visible light, that were point-like, similar to stars, rather than extended sources similar to galaxies.
+SidebarURL:     http://en.wikipedia.org/wiki/Quasar 
+
+Nodes:
+    - Type:         SuperMassiveBlackHole
+    
+    - Type:         BlackHole
+      MinAmount:    0
+      MaxAmount:    5
+    
+    - Type:         PlanetarySystem-Mundane      
+      MinAmount:    0
+      MaxAmount:    2
+    
+    - Type:         Star-Mundane
+      MaxAmount:    8
+
+    - Type:         Nebula-Mundane
+      MaxAmount:    10 
+...

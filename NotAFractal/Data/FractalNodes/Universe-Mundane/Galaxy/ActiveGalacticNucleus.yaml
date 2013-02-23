@@ -1,0 +1,25 @@
+---
+Title:          Active Galactic Nucleus
+
+SidebarTitle:   Active Galactic Nucleus
+SidebarText:
+  An active galactic nucleus (AGN) is a compact region at the centre of a galaxy that has a much higher than normal luminosity over at least some portion, and possibly all, of the electromagnetic spectrum. A galaxy hosting an AGN is called an active galaxy. The radiation from AGN is believed to be a result of accretion of mass by the supermassive black hole at the centre of the host galaxy.
+SidebarURL:     http://en.wikipedia.org/wiki/Active_galactic_nucleus 
+
+Nodes:
+    - Type:         SuperMassiveBlackHole
+    
+    - Type:         BlackHole
+      MinAmount:    0
+      MaxAmount:    5
+    
+    - Type:         PlanetarySystem-Mundane      
+      MinAmount:    0
+      MaxAmount:    2
+    
+    - Type:         Star-Mundane
+      MaxAmount:    4
+
+    - Type:         Nebula-Mundane
+      MaxAmount:    5      
+...

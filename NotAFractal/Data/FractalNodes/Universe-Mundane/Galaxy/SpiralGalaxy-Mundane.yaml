@@ -9,10 +9,13 @@ SidebarURL:     http://en.wikipedia.org/wiki/Spiral_galaxy
 
 Nodes:
     - Type:             GalaxyBulge-Mundane
+    
     - Type:             SpiralGalaxyHalo-Mundane   
+
     - Type:             SpiralGalaxyArm-Mundane
       MinAmount:        2
       MaxAmount:        5
+    
     - Type:             SpiralGalaxyArm-Mundane
       PercentageChance:	15
       MinAmount:        1

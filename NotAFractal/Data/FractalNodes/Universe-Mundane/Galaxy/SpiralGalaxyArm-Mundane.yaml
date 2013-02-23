@@ -1,0 +1,25 @@
+---
+Title:          Spiral Arm
+
+SidebarTitle:   Spiral Arm
+SidebarText:
+  Spiral arms are regions of stars that extend from the center of spiral and barred spiral galaxies. These long, thin regions resemble a spiral and thus give spiral galaxies their name.
+SidebarURL:     http://en.wikipedia.org/wiki/Spiral_galaxy#Spiral_arms 
+
+Nodes:
+    - Type:             PlanetarySystem-Mundane      
+      MinAmount:        10
+      MaxAmount:        25
+    
+    - Type:             Star-Mundane
+      MaxAmount:        5      
+    
+    - Type:             Nebula-Mundane
+      MaxAmount:        5
+
+    - Type:             BlackHole
+      PercentageChance: 25
+      MinAmount:        1
+      MaxAmount:        5
+    
+...

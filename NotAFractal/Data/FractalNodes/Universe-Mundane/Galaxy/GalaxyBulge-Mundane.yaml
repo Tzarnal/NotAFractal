@@ -1,0 +1,29 @@
+---
+Title:          Galaxy Bulge
+
+SidebarTitle:   Galaxy Bulge
+SidebarText:
+  A tightly packed group of stars and other galaxtic material surrounding a supermassive black hole at the centre of a galaxy.
+SidebarURL:     http://en.wikipedia.org/wiki/Bulge_%28astronomy%29 
+
+ChoiceNodes:
+  -
+    - [SuperMassiveBlackHole, 8]
+    - [Quasar, 1]
+    - [ActiveGalacticNucleus, 2]
+
+Nodes:
+    - Type:             BlackHole
+      MinAmount:        0
+      MaxAmount:        5
+    
+    - Type:             PlanetarySystem-Mundane      
+      PercentageChance: 40
+      MaxAmount:        5
+    
+    - Type:             Star-Mundane
+      MaxAmount:        5      
+    
+    - Type:             Nebula-Mundane
+      MaxAmount:        5
+...

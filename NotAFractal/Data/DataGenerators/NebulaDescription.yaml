@@ -1,0 +1,44 @@
+---
+#Creates descritpions of nebula
+
+-
+    - ["A " , 1]
+
+-
+    - ["", 10]
+    - [Pretty, 1]
+    - [Dazzeling, 1]
+    - [Mundane, 1]
+    - [Diffuse, 1]
+    - [Glittering, 1]
+    - [Extraordinary, 1]
+    - [Massive, 1]
+    - [Collosal, 1]
+    - [Shimmering, 1]
+    - [Glowing, 1]
+    - [Fading, 1]
+    - [Luminous, 1]
+    - [Fascinating, 1]
+    - [Pale, 1]
+    - [Blinding, 1]
+
+-
+    - [" $Colour$ ", 1]
+
+-
+    - ["", 10]
+    - [Expanding, 1]
+    - [Contracting, 1]
+    - [Swirling, 1]
+    - [Stable, 1]
+    - [Unstable, 1]
+    - [Aging, 1]
+    - [Young, 1]
+    - [Dispersing, 1]
+    - [Shredded, 1]
+    - [Immaculate, 1]
+    - [Distorted, 1]
+
+-
+    - [" Nebula" , 1]  
+...
