@@ -12,8 +12,11 @@
                 <div class="span10 mainContent">
                     @RenderBody()              
                 </div>
-                <div class="span2 mainSidebar">
-                    @RenderSection("sidebar",false)     
+                <div id="sidebar" class="span2 mainSidebar visible-desktop">
+                    @RenderSection("sidebar", false)     
+                </div>
+                <div class="span2 mainSidebar visible-phone visible-tablet">
+                    @RenderSection("sidebar", false)     
                 </div>
             </div>
         </div>
