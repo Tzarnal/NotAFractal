@@ -6,8 +6,6 @@ SidebarText:
    A planetary system is a set of gravitationally bound non-stellar objects in orbit around a star or star system.
 SidebarURL:     http://en.wikipedia.org/wiki/Planetary_system
 
-ChoiceNodes:
-  
 Nodes:
     #This setup ensures there are double, tripple etc star systems
     - Type:             Star-Mundane
