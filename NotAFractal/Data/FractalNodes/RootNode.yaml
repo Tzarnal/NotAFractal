@@ -3,9 +3,8 @@
 Title:          Not A Fractal
 Name:           A limited subset of everything   
 SidebarText:    
-    Not a Fractal is named this way because a 2012 study found that the universe is probably not a fractal. And thats a marginally more clever name then Universe. <br> <br>
-    If you prefer, have a link to a new <a href="/Home/Random">Random</a> Universe.
-SidebarURL:     http://github.com/Xesyto/NotAFractal
+    Not a Fractal is named this way because a 2012 study found that the universe is probably not a fractal. And thats a marginally more clever name then Universe. <br> <br>    
+SidebarURL:     /Home/RandomNode/About-Page
 SidebarTitle:   Not A Fractal
 
 Nodes:
