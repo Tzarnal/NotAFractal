@@ -49,9 +49,10 @@ namespace NotAFractal.Data
                     return ParseYamlFile(yaml);
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 Debug.WriteLine("Error Opening/Parsing: " + fileName);
+                Debug.WriteLine(e.Message);
                 throw;
             } 
         }
