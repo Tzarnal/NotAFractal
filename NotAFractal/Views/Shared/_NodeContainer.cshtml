@@ -8,7 +8,7 @@
                              
     @if(!Model.Text.IsEmpty())
     {
-    <p>@Model.Text</p> 
+    <p>@Html.Raw(Model.Text)</p> 
     }
 
     @foreach (var node in @Model.ChildNodes)
@@ -16,7 +16,7 @@
         @Html.Partial("_NodeStub", node)
     }
     
-    @if(!Model.ChildNodes.Any())
+    @if(!Model.ChildNodes.Any() && string.IsNullOrEmpty(Model.Name) && string.IsNullOrEmpty(Model.Text))
     {
         <p>Empty Node</p>
     }
