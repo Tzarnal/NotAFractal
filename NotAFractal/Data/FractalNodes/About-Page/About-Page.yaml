@@ -1,0 +1,24 @@
+---
+Title:          About Not A Fractal
+Text:
+    Not a Fractal is a clone of <a href="http://orteil.dashnet.org/nested">Nested</a> by Orteil <br><br>
+
+    Aside from the actual content of the universe major differences include an somewhat informative sidebar and a persitant universe. If you go to the same place
+    in the universe it will always contain the same stuff ( untill I add more stuff to the universe). This means you can also link those things to other people. <br><br>
+
+    All nodes have a information icon that opens a sidebar, in that sidebar you can find a link to that specific node. <br><br>
+
+    Not A Fractal is open source and you can find it on <a href="https://github.com/Xesyto/NotAFractal">github</a>. Its made in .net mvc 4, written in c#. It uses flatstrap  and jquery for
+    the layout and general web stuff.<br><br>
+
+    Its data is actually stored in yaml files which are easier to read and write then most other ways of storing data in programs. If you think you have cool additions to the universe and
+    know how to work with github I'd love to see your pull request.<br><br>
+
+
+Nodes:
+    - Type:             Update1
+    - Type:             Updates-Page   
+    - Type:             Contact-Page
+    - Type:             Hints-Page
+ 
+...
