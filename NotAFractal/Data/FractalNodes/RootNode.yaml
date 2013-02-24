@@ -1,7 +1,7 @@
 ---
 #By design not all nodes are included in the project, don't worry, as long as your node is a .yaml file in the FractalNodes directory it will be used.
 Title:          Not A Fractal
-Name:           A limited subset of everything   
+Name:           A limited, innacurate subset of everything   
 SidebarText:    
     Not a Fractal is named this way because a 2012 study found that the universe is probably not a fractal. And thats a marginally more clever name then Universe. <br> <br>    
 SidebarURL:     /Home/RandomNode/About-Page
