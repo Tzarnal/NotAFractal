@@ -1,0 +1,12 @@
+---
+Title:          Ammonia
+
+SidebarTitle:   Ammonia
+SidebarText:  
+            Ammonia or azane is a compound of nitrogen and hydrogen.  It is a colourless gas with a characteristic pungent smell. 
+SidebarURL:     http://en.wikipedia.org/wiki/Ammonia
+
+Nodes:
+    - Type:             Nitrogen
+    - Type:             Oxygen    
+...

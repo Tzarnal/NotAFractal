@@ -10,4 +10,16 @@ Nodes:
     - Type: CosmicDust-Mundane
     - Type: Hydrogen
     - Type: Helium
+
+    - Type: Ammonia
+      PercentageChance: 20
+
+    - Type: Nitrogen
+      PercentageChance: 20
+
+    - Type: Sulfur
+      PercentageChance: 20
+
+    - Type: Oxygen
+      PercentageChance: 20      
 ...
