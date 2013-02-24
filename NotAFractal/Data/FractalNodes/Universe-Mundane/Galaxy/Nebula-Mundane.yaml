@@ -7,6 +7,14 @@ SidebarText:
 SidebarURL:     http://en.wikipedia.org/wiki/Nebula
 
 Nodes:
+    - Type: ProtoStar-Mundane
+      PercentageChance: 66
+      MaxAmount: 2
+
+    - Type: ProtoStar-Mundane
+      PercentageChance: 33
+      MaxAmount: 5
+
     - Type: CosmicDust-Mundane
     - Type: Hydrogen
     - Type: Helium

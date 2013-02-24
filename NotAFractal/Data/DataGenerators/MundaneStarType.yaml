@@ -1,20 +1,21 @@
 ---
 #Exciting star names.
 -
-    - [Blue Dwarf, 5]
-    - [Red Dwarf, 5]
-    - [Brown Dwarf, 5]
+    - [Blue Dwarf, 4]
+    - [Red Dwarf, 4]
+    - [Yellow Dwarf, 7]
     
     - [Blue Giant, 3]
     - [Red Giant, 3]
+    - [Yellow Giant, 4]
     
-    - [Blue Supergiant, 2]
-    - [Red Supergiant, 2]    
+    - [Blue Supergiant, 3]
+    - [Red Supergiant, 3]    
     - [Yellow Supergiant, 2]
     
-    - [Yellow Hypergiant, 1]
+    - [Yellow Hypergiant, 2]
+    - [Red Hypergiant, 1]
     
-    - [Blue Straggeler, 1]
 
 -
     - [" Star", 1]

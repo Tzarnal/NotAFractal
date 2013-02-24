@@ -1,0 +1,19 @@
+---
+#Exciting star names.
+-
+    - [Blue, 1]
+    - [Red, 1]  
+    - [Yellow, 1]    
+
+-
+    - [" ",1]
+
+-
+    - [Dwarf,4]
+    - [Giant,3]
+    - [Supergiant,2]
+    - [Hypergiant,1]
+
+-
+    - [" Protostar", 1]
+...
