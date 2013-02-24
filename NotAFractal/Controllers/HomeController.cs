@@ -13,7 +13,7 @@ namespace NotAFractal.Controllers
             return View(_nodes.BuildNodeViewModel(1,"RootNode"));            
         }
 
-        public ActionResult RandomNone(string id)
+        public ActionResult RandomNode(string id)
         {
             var random = new Random();
             return View("Index", _nodes.BuildNodeViewModel(random.Next(1, int.MaxValue), id));

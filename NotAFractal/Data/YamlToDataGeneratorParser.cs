@@ -10,6 +10,8 @@ namespace NotAFractal.Data
 {
     public class YamlToDataGeneratorParser
     {
+        private static string _curFileName;
+        
         public static Dictionary<string, DataGenerator> ParseGenerators()
         {
             var path = HostingEnvironment.MapPath(@"~/Data/DataGenerators");
@@ -37,6 +39,8 @@ namespace NotAFractal.Data
 
         private static DataGenerator ReadFile( string fileName)
         {
+            _curFileName = fileName;
+            
             try
             {
                 using (var input = new StreamReader(fileName))
@@ -47,10 +51,11 @@ namespace NotAFractal.Data
                     return ParseYamlFile(yaml);
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                Debug.WriteLine("Error Opening/Parsing: " + fileName);                
-                throw;
+                Debug.WriteLine("Error Opening/Parsing: " + fileName);
+                Debug.WriteLine(e.Message);
+                return null;
             }            
         }
 
@@ -89,6 +94,7 @@ namespace NotAFractal.Data
             }            
             catch (Exception e)
             {
+                Debug.WriteLine("Error parsing: {0}", _curFileName);
                 Debug.WriteLine(e);
                 return null;
             }

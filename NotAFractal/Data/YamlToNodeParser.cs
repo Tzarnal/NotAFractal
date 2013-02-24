@@ -10,6 +10,8 @@ namespace NotAFractal.Data
 {
     public class YamlToNodeParser
     {
+        private static string _curFileName;
+        
         public static Dictionary<string, FractalNode> ParseNodes()
         {
             var path = HostingEnvironment.MapPath(@"~/Data/FractalNodes");
@@ -39,6 +41,8 @@ namespace NotAFractal.Data
 
         private static FractalNode ReadFile(string fileName)
         {
+            _curFileName = fileName;
+
             try
             {
                 using (var input = new StreamReader(fileName))
@@ -219,6 +223,7 @@ namespace NotAFractal.Data
             }
             catch (Exception e)
             {
+                Debug.WriteLine("Error parsing: {0}", _curFileName);
                 Debug.WriteLine(e);
                 return null;
             }
