@@ -57,7 +57,7 @@ namespace NotAFractal.Data
             {
                 Debug.WriteLine("Error Opening/Parsing: " + fileName);
                 Debug.WriteLine(e.Message);
-                throw;
+                return null;
             } 
         }
 
