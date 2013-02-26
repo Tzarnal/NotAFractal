@@ -1,0 +1,11 @@
+---
+Title:          Neutron Star
+
+SidebarTitle:   Neutron Star
+SidebarText:
+   A protostar is a large mass that forms by contraction out of gas. . For a one solar-mass star it lasts about 100,000 years. It starts with a core of increased density in a molecular cloud and ends with the formation of a T Tauri star, which then develops into a main sequence star.
+SidebarURL:     http://en.wikipedia.org/wiki/Protostar
+
+Nodes:
+    - Type:             Neutron
+...
