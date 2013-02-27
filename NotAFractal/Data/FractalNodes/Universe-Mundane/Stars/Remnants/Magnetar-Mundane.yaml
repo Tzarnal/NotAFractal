@@ -1,0 +1,19 @@
+---
+Title:          Magnetar
+
+SidebarTitle:   Magnetar
+SidebarText:
+   A magnetar is a type of neutron star with an extremely powerful magnetic field, the decay of which powers the emission of high-energy electromagnetic radiation, particularly X-rays and gamma rays.
+SidebarURL:     http://en.wikipedia.org/wiki/Magnetar
+
+
+Nodes:
+    - Type:             Neutron
+    - Type:             Electron
+    - Type:             UpQuark
+    - Type:             DownQuark
+    - Type:             Gluon
+    
+    - Type:             StrangeMatter
+      PercentageChance: 50    
+...

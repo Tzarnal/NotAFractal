@@ -1,0 +1,11 @@
+---
+Title:          Strange Matter
+
+SidebarTitle:   Strange Matter
+SidebarText:
+   Strange matter is a particular form of quark matter, usually thought of as a "liquid" of up, down, and strange quarks. It is to be contrasted with nuclear matter, which is a liquid of neutrons and protons (which themselves are built out of up and down quarks), and with non-strange quark matter, which is a quark liquid containing only up and down quarks. At high enough density, strange matter is expected to be color superconducting. 
+SidebarURL:     http://en.wikipedia.org/wiki/Strangelet
+
+Nodes:
+    - Type:             Strangelet
+...

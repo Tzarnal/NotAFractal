@@ -1,0 +1,17 @@
+---
+Title:          White Dwarf Star
+
+SidebarTitle:   White Dwarf Star
+SidebarText:
+   A white dwarf, also called a degenerate dwarf, is a stellar remnant composed mostly of electron-degenerate matter. They are very dense; a white dwarf's mass is comparable to that of the Sun and its volume is comparable to that of the Earth. Its faint luminosity comes from the emission of stored thermal energy.
+SidebarURL:     http://en.wikipedia.org/wiki/White_dwarf
+
+
+Nodes:
+    - Type:             Electron
+    - Type:             Carbon
+    - Type:             Helium  
+    
+    - Type:             StarTraceElements
+      PercentageChance: 60  
+...

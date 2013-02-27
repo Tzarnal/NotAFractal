@@ -1,0 +1,19 @@
+---
+Title:          Pulsar
+
+SidebarTitle:   Pulsar
+SidebarText:
+   A pulsar (portmanteau of pulsating star) is a highly magnetized, rotating neutron star that emits a beam of electromagnetic radiation. This radiation can only be observed when the beam of emission is pointing toward the Earth, much the way a lighthouse can only be seen when the light is pointed in the direction of an observer, and is responsible for the pulsed appearance of emission.
+SidebarURL:     http://en.wikipedia.org/wiki/Pulsar
+
+
+Nodes:
+    - Type:             Neutron
+    - Type:             Electron
+    - Type:             UpQuark
+    - Type:             DownQuark
+    - Type:             Gluon
+    
+    - Type:             StrangeMatter
+      PercentageChance: 50    
+...
