@@ -18,14 +18,31 @@ Nodes:
       MinAmount:        1
       MaxAmount:        2
 
-    - Type:             PlanetarySystem-Remnantstar      
+    - Type:             PlanetarySystem-RemnantStar      
       PercentageChance: 50
       MinAmount:        1
       MaxAmount:        2
     
     
     - Type:         Star-Mundane
-      MaxAmount:    4
+      MaxAmount:    2
+
+    
+    - Type:             Magnetar-Mundane
+      PercentageChance: 10
+      MaxAmount:        2
+
+    - Type:             WhiteDwarf-Mundane
+      PercentageChance: 10
+      MaxAmount:        2      
+
+    - Type:             Pulsar-Mundane
+      PercentageChance: 10
+      MaxAmount:        2     
+
+    - Type:             NeutronStar-Mundane
+      PercentageChance: 10
+      MaxAmount:        2           
 
     - Type:         Nebula-Mundane
       MaxAmount:    5      

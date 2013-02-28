@@ -26,7 +26,23 @@ Nodes:
       MaxAmount:        3
     
     - Type:             Star-Mundane
-      MaxAmount:        5      
+      MaxAmount:        3      
+
+    - Type:             Magnetar-Mundane
+      PercentageChance: 10
+      MaxAmount:        2
+
+    - Type:             WhiteDwarf-Mundane
+      PercentageChance: 10
+      MaxAmount:        2      
+
+    - Type:             Pulsar-Mundane
+      PercentageChance: 10
+      MaxAmount:        2     
+
+    - Type:             NeutronStar-Mundane
+      PercentageChance: 10
+      MaxAmount:        2  
     
     - Type:             Nebula-Mundane
       MaxAmount:        5
