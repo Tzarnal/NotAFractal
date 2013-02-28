@@ -1,0 +1,25 @@
+---
+Title:          Comet
+
+SidebarTitle:   Comet
+SidebarText:  
+   A comet is an icy small Solar System body that, when close enough to the Sun, displays a visible coma (a thin, fuzzy, temporary atmosphere) and sometimes also a tail. These phenomena are both due to the effects of solar radiation and the solar wind upon the nucleus of the comet. Comet nuclei range from a few hundred meters to tens of kilometers across and are composed of loose collections of ice, dust, and small rocky particles. Comets have been observed since ancient times.
+SidebarURL:     http://en.wikipedia.org/wiki/Comet
+
+Nodes:
+    - Type:             Silicate
+    - Type:             CosmicDust-Mundane.yaml    
+    - Type:             WaterIce-Mundane
+
+    - Type:             Ammonia
+      PercentageChance: 40
+
+    - Type:             CarbonMonoxide
+      PercentageChance: 40
+
+    - Type:             CarbonDioxide
+      PercentageChance: 40
+
+    - Type:             Methane
+      PercentageChance: 40                  
+...

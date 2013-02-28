@@ -1,0 +1,62 @@
+---
+Title:          Planetary System
+
+SidebarTitle:   Planetary System
+SidebarText:
+   A planetary system is a set of gravitationally bound non-stellar objects in orbit around a star or star system.
+SidebarURL:     http://en.wikipedia.org/wiki/Planetary_system
+
+Nodes:
+    #This setup ensures there are double, tripple etc star systems
+    
+    #Central object, star mass sized objects
+    - Type:             Star-Mundane
+
+    - Type:             Star-Mundane
+      PercentageChance: 25
+    
+    - Type:             Star-Mundane
+      PercentageChance: 10
+
+    - Type:             BlackHole
+      PercentageChance: 5
+
+    - Type:             Star-Mundane
+      PercentageChance: 5
+      MinAmount:        1
+      MaxAmount:        3
+
+    # star / planet transitinal astroid belt, possibly remains of destroyed planet
+    - Type:             AsteroidBelt-Mundane 
+      PercentageChance: 15
+      MaxAmount:        1
+
+    # Terrestrial planets, eart, mars, etc.
+    - Type:             Planet-Terrestrial      
+      MinAmount:        0
+      MaxAmount:        5      
+    
+    # terrestrial / gas planet transitinal astroid belt
+    - Type:             AsteroidBelt-Mundane 
+      PercentageChance: 70
+      MaxAmount:        2
+
+    # gas giants, neptune, jupiter, etc.
+    - Type:             Planet-GasGiant      
+      MinAmount:        0
+      MaxAmount:        10
+
+    #last possible asteroid belt
+    - Type:             AsteroidBelt-Mundane 
+      PercentageChance: 40
+      MaxAmount:        1      
+
+    #kuiperbelt, oortcloud, scatter disc like objects
+    - Type:             CometBelt-Mundane 
+      PercentageChance: 80
+      MaxAmount:        1   
+
+    - Type:             CometBelt-Mundane 
+      PercentageChance: 30
+      MaxAmount:        2               
+...

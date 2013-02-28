@@ -1,0 +1,14 @@
+---
+Title:          Comet Belt
+
+SidebarTitle:   Comet Belt
+SidebarText:  
+   A region of a planetary system filled with comets and other "small" objects, these tend to much further out then asteroid belts like the kuiper belt and the oort cloud. 
+SidebarURL:     http://en.wikipedia.org/wiki/Kuiper_belt
+
+Nodes:
+    - Type:             Comet-Mundane
+      MinAmount:        10
+      MaxAmount:        20    
+    
+...

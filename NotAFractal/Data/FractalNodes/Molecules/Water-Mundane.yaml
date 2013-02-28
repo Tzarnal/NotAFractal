@@ -9,5 +9,6 @@ SidebarURL:     http://en.wikipedia.org/wiki/Water
 
 Nodes:
     - Type:             Hydrogen
+    - Type:             Hydrogen
     - Type:             Oxygen    
 ...

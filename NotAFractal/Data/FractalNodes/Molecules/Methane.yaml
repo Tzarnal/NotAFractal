@@ -1,0 +1,15 @@
+---
+Title:          Methane
+
+SidebarTitle:   Methane
+SidebarText:  
+    Methane is a chemical compound with the chemical formula CH4. At room temperature and standard pressure, methane is a colorless, odorless gas.The relative abundance of methane makes it an attractive fuel.
+SidebarURL:     http://en.wikipedia.org/wiki/Methane
+    
+Nodes:
+    - Type:             Carbon
+    - Type:             Hydrogen 
+    - Type:             Hydrogen    
+    - Type:             Hydrogen
+    - Type:             Hydrogen
+...

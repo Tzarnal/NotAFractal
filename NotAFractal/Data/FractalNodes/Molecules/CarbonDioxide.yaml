@@ -1,0 +1,13 @@
+---
+Title:          Carbon Dioxide
+
+SidebarTitle:   Carbon Dioxide
+SidebarText:  
+    Carbon monoxide (CO2) is colorless. At low concentrations, the gas is odorless. At higher concentrations it has a sharp, acidic odor.
+SidebarURL:     http://en.wikipedia.org/wiki/Carbon_dioxide
+    
+Nodes:
+    - Type:             Carbon
+    - Type:             Oxygen 
+    - Type:             Oxygen    
+...

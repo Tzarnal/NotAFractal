@@ -1,0 +1,14 @@
+---
+Title:          Asteroid Belt
+
+SidebarTitle:   Asteroid Belt
+SidebarText:  
+   A region of a solar system filled with asteroids and other "small" objects. 
+SidebarURL:     http://en.wikipedia.org/wiki/Asteroid_belt
+
+Nodes:
+    - Type:             Asteriod-Mundane
+      MinAmount:        10
+      MaxAmount:        20    
+    
+...

@@ -1,0 +1,12 @@
+---
+Title:          Water
+
+SidebarTitle:   Water
+SidebarText:  
+        Ice is water frozen into the solid state. It can appear transparent or opaque bluish-white color, depending on the presence of impurities or air inclusions.
+SidebarURL:     http://en.wikipedia.org/wiki/Ice
+
+Nodes:
+    - Type:             Hydrogen
+    - Type:             Hydrogen
+    - Type:             Oxygen    

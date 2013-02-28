@@ -1,0 +1,17 @@
+---
+Title:          Asteroid
+
+SidebarTitle:   Asteroid
+SidebarText:  
+   Asteroids are small Solar System bodies or dwarf planets that are not comets. The term asteroids historically referred to objects inside the orbit of Jupiter. They have also been called planetoids, especially the larger ones.
+SidebarURL:     http://en.wikipedia.org/wiki/Asteroid_belt
+
+Nodes:
+    - Type:             Silicate
+    
+    - Type:             Water-Mundane
+      PercentageChance: 25    
+    
+    - Type:             WaterIce-Mundane
+      PercentageChance: 25    
+...
