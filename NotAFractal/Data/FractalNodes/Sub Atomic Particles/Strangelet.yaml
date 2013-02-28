@@ -6,4 +6,8 @@ SidebarText:
    A strangelet is a hypothetical particle consisting of a bound state of roughly equal numbers of up, down, and strange quarks. Its size would be a minimum of a few femtometres across (with the mass of a light nucleus).
 SidebarURL:     http://en.wikipedia.org/wiki/Strangelet
 
+Nodes:
+     - Type:    UpQuark
+     - Type:    DownQuark
+     - Type:    StrangeQuark
 ...
