@@ -8,8 +8,12 @@ SidebarURL:     http://en.wikipedia.org/wiki/Spiral_galaxy#Spiral_arms
 
 Nodes:
     - Type:             PlanetarySystem-Mundane      
-      MinAmount:        10
-      MaxAmount:        25
+      MinAmount:        5
+      MaxAmount:        15
+
+    - Type:             PlanetarySystem-RemnantStar      
+      MinAmount:        5
+      MaxAmount:        15      
     
     - Type:             Star-Mundane
       MaxAmount:        5      

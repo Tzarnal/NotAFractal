@@ -8,8 +8,12 @@ SidebarURL:     http://en.wikipedia.org/wiki/Galactic_halo
 
 Nodes:
     - Type:             PlanetarySystem-Mundane      
-      PercentageChance: 40
+      PercentageChance: 20
       MaxAmount:        5
+
+    - Type:             PlanetarySystem-RemnantStar      
+      PercentageChance: 20
+      MaxAmount:        5      
     
     - Type:             Star-Mundane
       MaxAmount:        10      

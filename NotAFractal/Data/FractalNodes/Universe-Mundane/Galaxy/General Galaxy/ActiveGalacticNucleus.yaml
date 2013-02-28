@@ -13,9 +13,16 @@ Nodes:
       MinAmount:    0
       MaxAmount:    5
     
-    - Type:         PlanetarySystem-Mundane      
-      MinAmount:    0
-      MaxAmount:    2
+    - Type:             PlanetarySystem-Mundane      
+      PercentageChance: 30
+      MinAmount:        1
+      MaxAmount:        2
+
+    - Type:             PlanetarySystem-Remnantstar      
+      PercentageChance: 50
+      MinAmount:        1
+      MaxAmount:        2
+    
     
     - Type:         Star-Mundane
       MaxAmount:    4

@@ -8,7 +8,7 @@ SidebarURL:     http://en.wikipedia.org/wiki/Comet
 
 Nodes:
     - Type:             Silicate
-    - Type:             CosmicDust-Mundane.yaml    
+    - Type:             CosmicDust-Mundane
     - Type:             WaterIce-Mundane
 
     - Type:             Ammonia
