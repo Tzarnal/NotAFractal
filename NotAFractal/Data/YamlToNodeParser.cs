@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Web.Hosting;
 using NotAFractal.Models;
@@ -14,8 +13,12 @@ namespace NotAFractal.Data
         
         public static Dictionary<string, FractalNode> ParseNodes()
         {
-            var path = HostingEnvironment.MapPath(@"~/Data/FractalNodes");
+            return ParseNodes(HostingEnvironment.MapPath(@"~/Data/FractalNodes"));
+        }
+        
 
+        public static Dictionary<string, FractalNode> ParseNodes(string path)
+        {
             if(path == null)
                 throw new FileNotFoundException();
 
@@ -31,8 +34,16 @@ namespace NotAFractal.Data
                 {
                     node.Type = nodeType;
                     // ReSharper disable AssignNullToNotNullAttribute
-                    nodes.Add(nodeType, node);
-                    // ReSharper restore AssignNullToNotNullAttribute         
+                    if(!nodes.ContainsKey(nodeType))
+                    {  
+                        nodes.Add(nodeType, node);
+                        
+                    }
+                    else
+                    {
+                        Console.WriteLine("Duplicate file: {0}", Path.GetFileName(nodeFile));
+                    }
+                    // ReSharper restore AssignNullToNotNullAttribute       
                 }       
             }
 
@@ -55,8 +66,8 @@ namespace NotAFractal.Data
             }
             catch (Exception e)
             {
-                Debug.WriteLine("Error Opening/Parsing: " + fileName);
-                Debug.WriteLine(e.Message);
+                Console.WriteLine("Error Opening/Parsing: " + fileName);
+                Console.WriteLine(e.Message);
                 return null;
             } 
         }
@@ -126,7 +137,7 @@ namespace NotAFractal.Data
 
                             if (!int.TryParse(subnode.Children[chanceScalar].ToString(), out amount))
                             {
-                                Debug.WriteLine("Could not parse int from subnode: {0} defaulting to 1", subnode);
+                                Console.WriteLine("Could not parse int from subnode: {0} defaulting to 1", subnode);
                             }
 
                             if( amount > 0 && amount <= 100)
@@ -154,7 +165,7 @@ namespace NotAFractal.Data
 
                             if (!int.TryParse(subnode.Children[maxScalar].ToString(), out amount))
                             {
-                                Debug.WriteLine("Could not parse int from subnode: {0} defaulting to 1", subnode);
+                                Console.WriteLine("Could not parse int from subnode: {0} defaulting to 1", subnode);
                             }
 
                             nodeWeighted.MaxAmount = amount;
@@ -171,7 +182,7 @@ namespace NotAFractal.Data
 
                             if (!int.TryParse(subnode.Children[minScalar].ToString(), out amount))
                             {
-                                Debug.WriteLine("Could not parse int from subnode: {0} defaulting to 1", subnode);
+                                Console.WriteLine("Could not parse int from subnode: {0} defaulting to 1", subnode);
                             }
 
                             nodeWeighted.MinAmount = (amount > nodeWeighted.MaxAmount) ? nodeWeighted.MaxAmount : amount;
@@ -209,7 +220,7 @@ namespace NotAFractal.Data
 
                             if (!int.TryParse(subnodeData[1].ToString(), out weight))
                             {
-                                Debug.WriteLine("Could not parse int from subnode: {0} defaulting to 1", subnode);
+                                Console.WriteLine("Could not parse int from subnode: {0} defaulting to 1", subnode);
                             }
 
                             entry.TotalWeight += weight;
@@ -223,8 +234,8 @@ namespace NotAFractal.Data
             }
             catch (Exception e)
             {
-                Debug.WriteLine("Error parsing: {0}", _curFileName);
-                Debug.WriteLine(e);
+                Console.WriteLine("Error parsing: {0}", _curFileName);
+                Console.WriteLine(e);
                 return null;
             }
 

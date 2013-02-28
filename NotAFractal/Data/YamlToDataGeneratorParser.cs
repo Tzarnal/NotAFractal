@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Web.Hosting;
 using NotAFractal.Models;
@@ -11,10 +10,15 @@ namespace NotAFractal.Data
     public class YamlToDataGeneratorParser
     {
         private static string _curFileName;
-        
+
         public static Dictionary<string, DataGenerator> ParseGenerators()
         {
-            var path = HostingEnvironment.MapPath(@"~/Data/DataGenerators");
+            return ParseGenerators( HostingEnvironment.MapPath(@"~/Data/DataGenerators") );
+        }
+
+        public static Dictionary<string, DataGenerator> ParseGenerators(string path)
+        {
+            
             var generators = new Dictionary<string, DataGenerator>();
 
             if(path == null)
@@ -28,8 +32,17 @@ namespace NotAFractal.Data
 
                 if( generator != null)
                 {
+                    var generatorName = Path.GetFileNameWithoutExtension(generatorFile);
+                    
                     // ReSharper disable AssignNullToNotNullAttribute
-                    generators.Add(Path.GetFileNameWithoutExtension(generatorFile), generator);
+                    if(!generators.ContainsKey(generatorName))
+                    {
+                         generators.Add(generatorName, generator);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Duplicate file: {0}", Path.GetFileName(generatorFile));
+                    }
                     // ReSharper restore AssignNullToNotNullAttribute
                 }
             }
@@ -53,8 +66,8 @@ namespace NotAFractal.Data
             }
             catch (Exception e)
             {
-                Debug.WriteLine("Error Opening/Parsing: " + fileName);
-                Debug.WriteLine(e.Message);
+                Console.WriteLine("Error Opening/Parsing: " + fileName);
+                Console.WriteLine(e.Message);
                 return null;
             }            
         }
@@ -82,7 +95,7 @@ namespace NotAFractal.Data
                         var weight = 1;
                         if(!int.TryParse( subnodeData[1].ToString(), out weight))
                         {
-                            Debug.WriteLine("Could not parse int from subnode: {0} defaulting to 1", subnode);
+                            Console.WriteLine("Could not parse int from subnode: {0} defaulting to 1", subnode);
                         }
 
                         generatorEntry.TotalWeight += weight;
@@ -94,8 +107,8 @@ namespace NotAFractal.Data
             }            
             catch (Exception e)
             {
-                Debug.WriteLine("Error parsing: {0}", _curFileName);
-                Debug.WriteLine(e);
+                Console.WriteLine("Error parsing: {0}", _curFileName);
+                Console.WriteLine(e);
                 return null;
             }
 
