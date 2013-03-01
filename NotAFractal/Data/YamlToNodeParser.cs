@@ -189,7 +189,7 @@ namespace NotAFractal.Data
                         }
                         else
                         {
-                            nodeWeighted.MinAmount = nodeWeighted.MaxAmount;
+                            nodeWeighted.MinAmount = 1;
                         }
 
                         if(node.Nodes == null)
