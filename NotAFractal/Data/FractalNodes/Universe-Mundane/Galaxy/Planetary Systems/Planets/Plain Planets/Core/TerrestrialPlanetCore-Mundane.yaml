@@ -1,0 +1,13 @@
+---
+Title:          Core
+
+SidebarTitle:   Planetary Core
+SidebarText:
+   The planetary core consists of the innermost layer(s) of a planet.
+SidebarURL:     http://en.wikipedia.org/wiki/Planetary_core
+
+
+
+Nodes:      
+    - Type:             Iron
+...

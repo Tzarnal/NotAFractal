@@ -1,0 +1,17 @@
+---
+Title:          Terrestrial Planet ( Lava )
+
+SidebarTitle:   Terrestrial Planet
+SidebarText:
+   A terrestrial planet, telluric planet or rocky planet is a planet that is composed primarily of silicate rocks or metals. <br> <br>
+   Lava Planets are either too close to  a star, have not cooled down yet or are very geologically unstable. Whatever the reason the surface of these in large part, covered in lava.
+SidebarURL:     http://en.wikipedia.org/wiki/Terrestrial_planet
+
+
+
+Nodes:      
+    - Type:             Lava-Mundane
+      PercentageChance: 30
+    
+    - Type:             TerrestrialPlanetCore-Mundane
+...

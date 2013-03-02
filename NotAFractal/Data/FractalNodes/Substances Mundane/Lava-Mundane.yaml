@@ -1,0 +1,31 @@
+---
+Title:          Lava
+
+SidebarTitle:   Lava
+SidebarText:
+   Lava refers both to molten rock expelled by a volcano during an eruption and the resulting rock after solidification and cooling.
+SidebarURL:     http://en.wikipedia.org/wiki/Lava#
+
+
+
+Nodes:      
+    - Type:             Silica
+    
+    - Type:             Aluminium
+      PercentageChance: 30
+
+    - Type:             Potassium
+      PercentageChance: 30
+
+    - Type:             Sodium
+      PercentageChance: 30
+
+    - Type:             Calcium
+      PercentageChance: 30
+
+    - Type:             Magnesium
+      PercentageChance: 30
+
+    - Type:             Iron
+      PercentageChance: 30
+...
