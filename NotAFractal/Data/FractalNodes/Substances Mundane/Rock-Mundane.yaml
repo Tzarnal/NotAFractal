@@ -1,0 +1,14 @@
+---
+Title:          Rock
+
+SidebarTitle:   Rock
+SidebarText:
+       
+SidebarURL:     http://en.wikipedia.org/wiki/Rock_%28geology%29
+
+
+
+ChoiceNodes:
+    -
+        - [Silica, 1]
+        - [Silicate, 1]

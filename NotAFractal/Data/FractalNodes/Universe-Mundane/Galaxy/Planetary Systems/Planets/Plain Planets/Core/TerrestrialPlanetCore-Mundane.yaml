@@ -7,7 +7,8 @@ SidebarText:
 SidebarURL:     http://en.wikipedia.org/wiki/Planetary_core
 
 
-
 Nodes:      
     - Type:             Iron
+    - Type:             Magma-Mundane 
+    - Type:             Rock-Mundane
 ...

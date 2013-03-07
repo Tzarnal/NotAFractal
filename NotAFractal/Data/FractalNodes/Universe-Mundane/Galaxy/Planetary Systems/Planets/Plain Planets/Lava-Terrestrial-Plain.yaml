@@ -11,7 +11,7 @@ SidebarURL:     http://en.wikipedia.org/wiki/Terrestrial_planet
 
 Nodes:      
     - Type:             Lava-Mundane
-      PercentageChance: 30
+    - Type:             Rock-Mundane
     
     - Type:             TerrestrialPlanetCore-Mundane
 ...
